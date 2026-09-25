@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>働く仲間を知る | 採用サイト | 株式会社Rise Tech Solutions</title>
+  <meta name="description" content="Rise Tech Solutionsで働く仲間を紹介。未経験・異業種出身のエンジニア、マーケター、経営メンバーまで、リアルな声をそのままお届けします。">
+  <meta property="og:title" content="働く仲間を知る | 株式会社Rise Tech Solutions">
+  <meta property="og:description" content="未経験も異業種出身も関係なく活躍するRTSの仲間たち。リアルな声をお届けします。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://rt-solutions.co.jp/recruit/people/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css?v=20260927x">
+  <style>
+    .sub-hero { background:linear-gradient(135deg,#0a1525 0%,#1c2c43 60%,#0d2340 100%); padding:calc(var(--header-h) + 80px) 0 80px; position:relative; overflow:hidden; }
+    .sub-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,212,200,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,200,.04) 1px,transparent 1px); background-size:60px 60px; }
+    .sub-hero__blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .sub-hero__blob--1 { width:500px; height:500px; background:radial-gradient(circle,rgba(0,212,200,.2) 0%,transparent 70%); top:-150px; right:-80px; animation:floatShape 14s ease-in-out infinite; }
+    .sub-hero__inner { position:relative; z-index:1; }
+    .sub-hero__breadcrumb { display:flex; gap:8px; align-items:center; font-size:1.2rem; color:rgba(255,255,255,.4); margin-bottom:24px; }
+    .sub-hero__breadcrumb a { color:rgba(255,255,255,.4); transition:color .25s; }
+    .sub-hero__breadcrumb a:hover { color:#00d4c8; }
+    .sub-hero__breadcrumb span { color:rgba(255,255,255,.2); }
+    .sub-hero__en { font-family:var(--font-en); font-size:1rem; font-weight:700; letter-spacing:.3em; color:#00d4c8; margin-bottom:16px; }
+    .sub-hero__title { font-size:clamp(3.6rem,6vw,6.4rem); font-weight:900; background:linear-gradient(135deg,#fff 0%,#00d4c8 50%,#2b5fff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1.15; margin-bottom:20px; }
+    .sub-hero__lead { font-size:1.8rem; color:rgba(255,255,255,.65); max-width:640px; line-height:1.9; }
+    .p-people { padding: 100px 0; }
+  </style>
+  <link rel="stylesheet" href="pop.css?v=20260927x">
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <p class="l-header__logo">
+        <a href="index.html">
+          <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+          <em>採用サイト</em>
+        </a>
+      </p>
+      <nav class="l-gnav" id="gnav">
+        <ul class="l-gnav__list">
+          <li class="l-gnav__has-dropdown">
+            <a href="business.html"><span class="en">WORK</span><span class="ja">仕事を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="business-solution.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">ソリューション事業部</span><span class="l-gnav__dropdown-desc">受託開発・SES。要件定義から保守まで</span></a>
+              <a href="business-product.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">プロダクト事業部</span><span class="l-gnav__dropdown-desc">自社SaaS「En Root」を企画から開発・運営</span></a>
+              <a href="business-consulting.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">コンサルティング事業部</span><span class="l-gnav__dropdown-desc">CSO伴走・経営×ITコンサル</span></a>
+              <a href="business-bpo.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">BPO事業部</span><span class="l-gnav__dropdown-desc">事務・経理代行と1on1メンタリング</span></a>
+            </div>
+          </li>
+          <li><a href="about.html"><span class="en">ABOUT</span><span class="ja">会社を知る</span></a></li>
+          <li class="is-active"><a href="people.html"><span class="en">PEOPLE</span><span class="ja">働く仲間を知る</span></a></li>
+          <li><a href="culture.html"><span class="en">CULTURE</span><span class="ja">環境を知る</span></a></li>
+          <li class="l-gnav__has-dropdown">
+            <a href="workstyle.html"><span class="en">WORKSTYLE</span><span class="ja">働き方を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="workstyle.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">数字で見る働き方</span><span class="l-gnav__dropdown-desc">残業・休日の実績を正直に公開</span></a>
+              <a href="recruit.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">1日のスケジュール</span><span class="l-gnav__dropdown-desc">職種ごとのリアルな1日の流れ</span></a>
+              <a href="culture.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">福利厚生・研修制度</span><span class="l-gnav__dropdown-desc">使われている制度だけを紹介</span></a>
+              <a href="culture.html#env-career" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">キャリアパス</span><span class="l-gnav__dropdown-desc">未経験から経営層まで、実例で見る成長の道筋</span></a>
+            </div>
+          </li>
+          <li><a href="news.html"><span class="en">NEWS</span><span class="ja">お知らせ</span></a></li>
+          <li><a href="recruit.html"><span class="en">RECRUIT</span><span class="ja">採用情報</span></a></li>
+        </ul>
+        <div class="l-gnav__btns">
+          <a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener" class="btn-corp">コーポレートサイト</a>
+          <a href="entry-form.html" class="btn-entry js-magnetic">ENTRY</a>
+        </div>
+      </nav>
+      <button class="l-header__hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="cursor" id="cursor"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+
+  <section class="sub-hero">
+    <div class="sub-hero__blob sub-hero__blob--1"></div>
+    <div class="l-inner sub-hero__inner">
+      <div class="sub-hero__breadcrumb">
+        <a href="index.html">TOP</a><span>›</span><span>働く仲間を知る</span>
+      </div>
+      <p class="sub-hero__en">PEOPLE</p>
+      <h1 class="sub-hero__title">働く仲間を知る</h1>
+      <p class="sub-hero__lead">入社するまで、会社のことって正直わからないですよね。<br>だから実際に働いている人の声を、できるだけそのままお届けします。</p>
+    </div>
+  </section>
+
+  <section class="p-people" id="people">
+    <div class="l-inner">
+      <ul class="p-people__list">
+
+        <li class="p-people__category">
+          <span class="p-people__category-en">ENGINEER</span>
+          <span class="p-people__category-ja">エンジニア</span>
+          <span class="p-people__category-count">6名</span>
+        </li>
+
+        <li class="p-people__item">
+          <a href="people-02.html" class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/勝木.jpg" alt="勝木 はるな" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-dept">開発部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">勝木 はるな</h3>
+              <p class="p-people__card-role">フロントエンドエンジニア</p>
+              <p class="p-people__card-year">入社2年目</p>
+              <p class="p-people__card-edu">🎓 京都大学 文学部 卒業</p>
+              <p class="p-people__card-quote">「官庁からエンジニアへ。論理的思考を活かせる仕事を探して、たどり着いたのがここでした」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">未経験入社</span>
+                <span class="p-people__card-tag">官庁出身</span>
+                <span class="p-people__card-tag">フロントエンド</span>
+              </div>
+              <span class="p-people__card-link">ストーリーを読む</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-people__item">
+          <a href="people-03.html" class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/熊谷.jpg" alt="熊谷 洸介" loading="lazy" style="object-position:center 10%">
+              <span class="p-people__card-dept">開発部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">熊谷 洸介</h3>
+              <p class="p-people__card-role">サブマネージャー 兼 社内講師</p>
+              <p class="p-people__card-year">入社2年目</p>
+              <p class="p-people__card-quote">「技術を教えることで、自分もまだまだ成長できると気づいた。技術×教育で未来を創る」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">フリーランス経験</span>
+                <span class="p-people__card-tag">マネージャー</span>
+                <span class="p-people__card-tag">社内講師</span>
+              </div>
+              <span class="p-people__card-link">ストーリーを読む</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="p-people__item" data-modal="modal-person7">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/加藤.jpg" alt="加藤 一登" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-dept">開発部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">加藤 一登</h3>
+              <p class="p-people__card-role">執行役員 VPoE</p>
+              <p class="p-people__card-year">2024年入社</p>
+              <p class="p-people__card-quote">「無知を知ることが、学びのはじまり。製造業からエンジニアへ——自分に足りないものを知るたびに、もっと成長できると思えてる」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">製造業出身</span>
+                <span class="p-people__card-tag">未経験入社</span>
+                <span class="p-people__card-tag">グループ最年少役員</span>
+              </div>
+              <span class="p-people__card-link">ストーリーを読む</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item" data-modal="modal-person8">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/青木.jpg" alt="青木 耶雲" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-dept">開発部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">青木 耶雲</h3>
+              <p class="p-people__card-role">エンジニア</p>
+              <p class="p-people__card-year">RTS在籍</p>
+              <p class="p-people__card-quote">「AI・IoT技術の進化で工場の仕事が変わると感じ、7年間の製造業からIT業界へ。テクノロジーで産業の未来をつくりたい」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">7年製造業経験</span>
+                <span class="p-people__card-tag">異業種転職</span>
+                <span class="p-people__card-tag">IoT / AI</span>
+              </div>
+              <span class="p-people__card-link">ストーリーを読む</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/岩本.jpg" alt="岩本" loading="lazy" style="object-position:center 15%">
+              <span class="p-people__card-dept">ソリューション事業部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">岩本</h3>
+              <p class="p-people__card-role">開発エンジニア</p>
+              <p class="p-people__card-year">2026年入社</p>
+              <p class="p-people__card-quote">「3人の子育てをしながら。ライフステージが変わっても働き続けられる環境だと感じています」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">子育てと両立</span>
+                <span class="p-people__card-tag">Next.js</span>
+                <span class="p-people__card-tag">社会インフラ</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/武.jpg" alt="武 穂乃香" loading="lazy" style="object-position:center 14%">
+              <span class="p-people__card-dept">ソリューション事業部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">武 穂乃香</h3>
+              <p class="p-people__card-role">広報 / 開発エンジニア（兼任）</p>
+              <p class="p-people__card-year">2026年入社</p>
+              <p class="p-people__card-quote">「前職は広報担当者。伝える側とつくる側の両方に関われるのが、今の仕事の面白さです」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">異業種転職</span>
+                <span class="p-people__card-tag">広報出身</span>
+                <span class="p-people__card-tag">兼任</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__category">
+          <span class="p-people__category-en">CONSULTING</span>
+          <span class="p-people__category-ja">コンサルティング</span>
+          <span class="p-people__category-count">1名</span>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/目代.jpg" alt="目代 琢哉" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-dept">コンサルティング事業部</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">目代 琢哉</h3>
+              <p class="p-people__card-role">コンサルタント</p>
+              <p class="p-people__card-edu">🎓 慶應義塾大学 経済学部 卒業</p>
+              <p class="p-people__card-quote">経営者のすぐ隣で、会社の未来を一緒に考えるコンサルタント。インタビューは準備中です。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__category">
+          <span class="p-people__category-en">MANAGEMENT & HR</span>
+          <span class="p-people__category-ja">経営・HR</span>
+          <span class="p-people__category-count">1名</span>
+        </li>
+
+        <li class="p-people__item" data-modal="modal-person10">
+          <div class="p-people__card">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/中島.jpg" alt="中島 嘉寿" loading="lazy" style="object-position:center 10%">
+              <span class="p-people__card-dept">社長室</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">中島 嘉寿</h3>
+              <p class="p-people__card-role">社長室室長 / CHRO</p>
+              <p class="p-people__card-year">2020年入社</p>
+              <p class="p-people__card-edu">🎓 神奈川大学 経済学部 卒業</p>
+              <p class="p-people__card-quote">「意志あるところに道あり。BPOセンターの立ち上げから組織設計まで——意思と覚悟で未来を創り続けています」</p>
+              <div class="p-people__card-tags">
+                <span class="p-people__card-tag">社長室</span>
+                <span class="p-people__card-tag">BPO立ち上げ</span>
+                <span class="p-people__card-tag">人事責任者</span>
+              </div>
+              <span class="p-people__card-link">ストーリーを読む</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__category">
+          <span class="p-people__category-en">AND MORE</span>
+          <span class="p-people__category-ja">これから紹介する仲間</span>
+          <span class="p-people__category-count">5名</span>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card p-people__card--soon">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/明石.jpg" alt="明石" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-soon-badge">INTERVIEW<br>COMING SOON</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">明石</h3>
+              <p class="p-people__card-role">インタビュー準備中</p>
+              <p class="p-people__card-quote">どんな仕事をしているかは、もうすぐ公開。お楽しみに。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card p-people__card--soon">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/植松.jpg" alt="植松" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-soon-badge">INTERVIEW<br>COMING SOON</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">植松</h3>
+              <p class="p-people__card-role">インタビュー準備中</p>
+              <p class="p-people__card-quote">どんな仕事をしているかは、もうすぐ公開。お楽しみに。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card p-people__card--soon">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/櫻井.jpg" alt="櫻井" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-soon-badge">INTERVIEW<br>COMING SOON</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">櫻井</h3>
+              <p class="p-people__card-role">インタビュー準備中</p>
+              <p class="p-people__card-quote">どんな仕事をしているかは、もうすぐ公開。お楽しみに。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card p-people__card--soon">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/大宮.jpg" alt="大宮" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-soon-badge">INTERVIEW<br>COMING SOON</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">大宮</h3>
+              <p class="p-people__card-role">インタビュー準備中</p>
+              <p class="p-people__card-quote">どんな仕事をしているかは、もうすぐ公開。お楽しみに。</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="p-people__item">
+          <div class="p-people__card p-people__card--soon">
+            <div class="p-people__card-img">
+              <img src="images/個人写真/向井.jpg" alt="向井" loading="lazy" style="object-position:center 12%">
+              <span class="p-people__card-soon-badge">INTERVIEW<br>COMING SOON</span>
+            </div>
+            <div class="p-people__card-body">
+              <h3 class="p-people__card-name">向井</h3>
+              <p class="p-people__card-role">人事 / DXコンサルタント</p>
+              <p class="p-people__card-quote">どんな仕事をしているかは、もうすぐ公開。お楽しみに。</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    FOOTER
+  ======================================================== -->
+  <footer class="l-footer">
+    <div class="l-footer__main">
+      <div class="l-inner">
+        <div class="l-footer__main-inner">
+          <div class="l-footer__logo">
+            <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+            <em>採用サイト</em>
+          </div>
+          <div class="l-footer__info">
+            <p><strong>東京本社</strong><br>〒104-0045 東京都中央区築地2-10-2<br>JP-BASE築地駅前 7階</p>
+            <p><strong>熊本オフィス</strong><br>〒860-0047 熊本県熊本市西区春日1丁目14-1<br>くまもと森都心プラザ2階 XOSS POINT. Room1</p>
+            <p>TEL: <a href="tel:0368042140">03-6804-2140</a></p>
+          </div>
+          <nav class="l-footer__nav">
+            <ul>
+              <li><a href="business.html">OUR BUSINESS</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="people.html">PEOPLE</a></li>
+              <li><a href="culture.html">ENVIRONMENT</a></li>
+              <li><a href="workstyle.html">WORKSTYLE</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="recruit.html">RECRUIT</a></li>
+              <li><a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener">コーポレートサイト</a></li>
+            </ul>
+          </nav>
+          <div class="l-footer__sns">
+            <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" aria-label="Wantedly" class="l-footer__sns-item l-footer__sns-item--wantedly">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/rts.kumamoto" target="_blank" rel="noopener" aria-label="Instagram" class="l-footer__sns-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@risetechsolutions" target="_blank" rel="noopener" aria-label="TikTok" class="l-footer__sns-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__copy">
+      <p>&copy; 2026 Rise Tech Solutions Co., Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+    MODALS: PEOPLE
+  ======================================================== -->
+  <div class="c-modal c-modal--person" id="modal-person7" role="dialog" aria-modal="true">
+    <div class="c-modal__overlay" data-close></div>
+    <div class="c-modal__box">
+      <button class="c-modal__close" data-close aria-label="閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <div class="c-modal__person-head">
+        <img src="images/個人写真/加藤.jpg" alt="加藤 一登" class="c-modal__person-img" style="object-fit:cover;object-position:center 14%">
+        <div>
+          <span class="c-modal__person-dept">開発部</span>
+          <h3 class="c-modal__person-name">加藤 一登</h3>
+          <p class="c-modal__person-role">執行役員 VPoE ／ 2024年入社</p>
+        </div>
+      </div>
+      <div class="c-modal__person-qa">
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. Rise Tech Solutionsに入社を決めた理由は？</p>
+          <p class="c-modal__a">「製造業で7年間働く中で、AIやIT技術の進化を肌で感じ、自分も技術を作る側になりたいと思いました。未経験でも挑戦できる環境と、学び続けられる文化に惹かれてRTSを選びました。」</p>
+        </div>
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. 仕事で大切にしていることは？</p>
+          <p class="c-modal__a">「"無知を知ることが、学びのはじまり"という言葉を大切にしています。わからないことを素直に認め、毎日少しずつ成長し続けることが、エンジニアとしての基本だと思っています。」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-modal c-modal--person" id="modal-person8" role="dialog" aria-modal="true">
+    <div class="c-modal__overlay" data-close></div>
+    <div class="c-modal__box">
+      <button class="c-modal__close" data-close aria-label="閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <div class="c-modal__person-head">
+        <img src="images/個人写真/青木.jpg" alt="青木 耶雲" class="c-modal__person-img" style="object-fit:cover;object-position:center 14%">
+        <div>
+          <span class="c-modal__person-dept">開発部</span>
+          <h3 class="c-modal__person-name">青木 耶雲</h3>
+          <p class="c-modal__person-role">エンジニア ／ RTS在籍</p>
+        </div>
+      </div>
+      <div class="c-modal__person-qa">
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. IT業界に転身した理由は？</p>
+          <p class="c-modal__a">「工場で7年間働く中で、AI・IoT技術の進化により製造業の仕事が大きく変わると実感しました。技術に淘汰されるより、技術を作る側に立とうと思い、IT業界への転身を決意しました。」</p>
+        </div>
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. これから挑戦したいことは？</p>
+          <p class="c-modal__a">「IT技術を使って、製造業や飲食業界など"テクノロジーと縁遠い"とされてきた産業を変えていきたいです。現場を知っているからこそ、本当に使えるシステムが作れると思っています。」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-modal c-modal--person" id="modal-person10" role="dialog" aria-modal="true">
+    <div class="c-modal__overlay" data-close></div>
+    <div class="c-modal__box">
+      <button class="c-modal__close" data-close aria-label="閉じる"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <div class="c-modal__person-head">
+        <img src="images/個人写真/中島.jpg" alt="中島 嘉寿" class="c-modal__person-img" style="object-fit:cover;object-position:center 14%">
+        <div>
+          <span class="c-modal__person-dept">社長室</span>
+          <h3 class="c-modal__person-name">中島 嘉寿</h3>
+          <p class="c-modal__person-role">社長室室長 / CHRO ／ 2020年入社</p>
+          <p class="c-modal__person-edu">🎓 神奈川大学 経済学部 卒業</p>
+        </div>
+      </div>
+      <div class="c-modal__person-qa">
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. RTSに入社して一番大きな経験は？</p>
+          <p class="c-modal__a">「コロナ禍のBPOセンターの立ち上げです。ゼロから組織を作り、運営管理まで担当しました。答えのない中で意思決定し続けた経験が、今の自分の土台になっています。」</p>
+        </div>
+        <div class="c-modal__qa-item">
+          <p class="c-modal__q">Q. 座右の銘を教えてください。</p>
+          <p class="c-modal__a">「"意志あるところに道あり"です。環境や条件より、意思と覚悟があれば道は必ず開ける。それをRTSで体感してきました。組織の人と文化を作ることで、会社の未来を一緒に創っていきたいです。」</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating CTA -->
+  <div class="p-float-cta" id="floatCta" aria-hidden="true">
+    <div class="p-float-cta__inner">
+      <p class="p-float-cta__msg">まず、話を聞くだけでもOK。</p>
+      <a href="entry-form.html" class="p-float-cta__btn">エントリーする</a>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260927x"></script>
+  <script src="pop.js?v=20260927x"></script>
+</body>
+</html>

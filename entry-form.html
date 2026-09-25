@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エントリー | 採用サイト | 株式会社Rise Tech Solutions</title>
+  <meta name="description" content="Rise Tech Solutionsへのエントリー・カジュアル面談の予約は、公式LINEまたはWantedlyから。「まず話を聞くだけ」でも大歓迎です。">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260927x">
+  <style>
+    /* ===== Entry Form Page Styles ===== */
+    .p-entry-hero {
+      background: var(--c-dark);
+      padding: 160px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .p-entry-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 50% 0%, rgba(0,212,200,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .p-entry-hero__label {
+      font-family: var(--font-en);
+      font-size: 1rem;
+      letter-spacing: .3em;
+      color: var(--c-teal);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .p-entry-hero__title {
+      font-size: clamp(3.2rem, 5vw, 5.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .p-entry-hero__sub {
+      font-size: 1.5rem;
+      color: rgba(255,255,255,.6);
+      line-height: 1.8;
+    }
+
+    /* ===== Form Wrapper ===== */
+    .p-form-section {
+      background: var(--c-bg);
+      padding: 80px 0 120px;
+    }
+    .p-form-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 64px 72px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.07), 0 0 0 1px rgba(20,210,192,.08);
+    }
+
+    /* Position badge */
+    .p-form__position-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, rgba(0,212,200,.12) 0%, rgba(43,95,255,.12) 100%);
+      border: 1px solid rgba(20,210,192,.3);
+      border-radius: 40px;
+      padding: 10px 20px;
+      margin-bottom: 40px;
+    }
+    .p-form__position-badge span {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--c-teal-dark);
+    }
+    .p-form__position-badge em {
+      font-style: normal;
+      font-size: 1.2rem;
+      color: var(--c-text-mid);
+    }
+
+    /* Form fields */
+    .p-form__group {
+      margin-bottom: 32px;
+    }
+    .p-form__label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 10px;
+    }
+    .p-form__required {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e05252;
+      background: rgba(224,82,82,.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .p-form__optional {
+      font-size: 1.1rem;
+      color: var(--c-text-mid);
+      background: var(--c-bg);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .p-form__input,
+    .p-form__select,
+    .p-form__textarea {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1.5rem;
+      font-family: var(--font-ja);
+      color: var(--c-dark);
+      background: var(--c-bg);
+      border: 2px solid #e8eaed;
+      border-radius: 10px;
+      transition: border-color .25s, box-shadow .25s;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+      box-sizing: border-box;
+    }
+    .p-form__input:focus,
+    .p-form__select:focus,
+    .p-form__textarea:focus {
+      border-color: var(--c-teal);
+      box-shadow: 0 0 0 4px rgba(20,210,192,.12);
+      background: #fff;
+    }
+    .p-form__select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2314d2c0' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 20px;
+      padding-right: 48px;
+      cursor: pointer;
+    }
+    .p-form__textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.8;
+    }
+
+    /* File upload */
+    .p-form__file-area {
+      position: relative;
+      border: 2px dashed #d0d5dd;
+      border-radius: 12px;
+      padding: 32px 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .25s, background .25s;
+    }
+    .p-form__file-area:hover,
+    .p-form__file-area.is-drag {
+      border-color: var(--c-teal);
+      background: rgba(20,210,192,.04);
+    }
+    .p-form__file-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .p-form__file-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 12px;
+      color: var(--c-teal);
+    }
+    .p-form__file-icon svg { width: 100%; height: 100%; }
+    .p-form__file-text {
+      font-size: 1.4rem;
+      color: var(--c-text-mid);
+      line-height: 1.8;
+    }
+    .p-form__file-text strong { color: var(--c-teal-dark); }
+    .p-form__file-name {
+      margin-top: 10px;
+      font-size: 1.3rem;
+      color: var(--c-teal-dark);
+      font-weight: 600;
+      display: none;
+    }
+    .p-form__file-name.is-shown { display: block; }
+    .p-form__file-hint {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      color: var(--c-text-mid);
+    }
+
+    /* Two cols */
+    .p-form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* Divider */
+    .p-form__divider {
+      height: 1px;
+      background: #e8eaed;
+      margin: 40px 0;
+    }
+
+    /* Privacy */
+    .p-form__privacy {
+      background: var(--c-bg);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .p-form__privacy-text {
+      font-size: 1.3rem;
+      color: var(--c-text-mid);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+    .p-form__check {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .p-form__check input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--c-teal);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .p-form__check-label {
+      font-size: 1.4rem;
+      color: var(--c-dark);
+      line-height: 1.7;
+    }
+
+    /* Submit */
+    .p-form__submit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .p-form__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 64px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #00d4c8 0%, #2b5fff 100%);
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: transform .3s var(--spring), box-shadow .3s;
+      box-shadow: 0 8px 32px rgba(0,212,200,.35);
+      letter-spacing: .05em;
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+    }
+    .p-form__btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,212,200,.45);
+    }
+    .p-form__btn:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .p-form__btn svg { width: 20px; height: 20px; transition: transform .3s; }
+    .p-form__btn:hover svg { transform: translateX(4px); }
+    .p-form__note {
+      font-size: 1.2rem;
+      color: var(--c-text-mid);
+      text-align: center;
+    }
+
+    /* Success state */
+    .p-form-success {
+      display: none;
+      text-align: center;
+      padding: 80px 40px;
+    }
+    .p-form-success.is-shown { display: block; }
+    .p-form-success__icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d4c8 0%, #2b5fff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      box-shadow: 0 12px 40px rgba(0,212,200,.35);
+    }
+    .p-form-success__icon svg { width: 40px; height: 40px; color: #fff; }
+    .p-form-success__title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--c-dark);
+      margin-bottom: 16px;
+    }
+    .p-form-success__text {
+      font-size: 1.5rem;
+      color: var(--c-text-mid);
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+    .p-form-success__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--c-teal-dark);
+      font-weight: 600;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+    .p-form-success__back:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .p-form-wrap { padding: 40px 24px; }
+      .p-form__row { grid-template-columns: 1fr; gap: 16px; }
+      .p-entry-hero { padding: 130px 0 60px; }
+    }
+  </style>
+  <link rel="stylesheet" href="pop.css?v=20260927x">
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+
+
+  <!-- ========================================================
+    HEADER
+  ======================================================== -->
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <p class="l-header__logo">
+        <a href="index.html">
+          <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+          <em>採用サイト</em>
+        </a>
+      </p>
+      <nav class="l-gnav" id="gnav">
+        <ul class="l-gnav__list">
+          <li class="l-gnav__has-dropdown">
+            <a href="business.html"><span class="en">WORK</span><span class="ja">仕事を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="business-solution.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">ソリューション事業部</span><span class="l-gnav__dropdown-desc">受託開発・SES。要件定義から保守まで</span></a>
+              <a href="business-product.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">プロダクト事業部</span><span class="l-gnav__dropdown-desc">自社SaaS「En Root」を企画から開発・運営</span></a>
+              <a href="business-consulting.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">コンサルティング事業部</span><span class="l-gnav__dropdown-desc">CSO伴走・経営×ITコンサル</span></a>
+              <a href="business-bpo.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">BPO事業部</span><span class="l-gnav__dropdown-desc">事務・経理代行と1on1メンタリング</span></a>
+            </div>
+          </li>
+          <li><a href="about.html"><span class="en">ABOUT</span><span class="ja">会社を知る</span></a></li>
+          <li><a href="people.html"><span class="en">PEOPLE</span><span class="ja">働く仲間を知る</span></a></li>
+          <li><a href="culture.html"><span class="en">CULTURE</span><span class="ja">環境を知る</span></a></li>
+          <li class="l-gnav__has-dropdown">
+            <a href="workstyle.html"><span class="en">WORKSTYLE</span><span class="ja">働き方を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="workstyle.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">数字で見る働き方</span><span class="l-gnav__dropdown-desc">残業・休日の実績を正直に公開</span></a>
+              <a href="recruit.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">1日のスケジュール</span><span class="l-gnav__dropdown-desc">職種ごとのリアルな1日の流れ</span></a>
+              <a href="culture.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">福利厚生・研修制度</span><span class="l-gnav__dropdown-desc">使われている制度だけを紹介</span></a>
+              <a href="culture.html#env-career" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">キャリアパス</span><span class="l-gnav__dropdown-desc">未経験から経営層まで、実例で見る成長の道筋</span></a>
+            </div>
+          </li>
+          <li><a href="news.html"><span class="en">NEWS</span><span class="ja">お知らせ</span></a></li>
+          <li class="is-active"><a href="recruit.html"><span class="en">RECRUIT</span><span class="ja">採用情報</span></a></li>
+        </ul>
+        <div class="l-gnav__btns">
+          <a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener" class="btn-corp">コーポレートサイト</a>
+          <a href="entry-form.html" class="btn-entry js-magnetic">ENTRY</a>
+        </div>
+      </nav>
+      <button class="l-header__hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================
+    HERO
+  ======================================================== -->
+  <section class="p-entry-hero">
+    <div class="l-inner">
+      <span class="p-entry-hero__label">ENTRY FORM</span>
+      <h1 class="p-entry-hero__title">エントリー</h1>
+      <p class="p-entry-hero__sub">Rise Tech Solutionsへの第一歩を踏み出しましょう。<br>いちばん気軽な方法で、声をかけてください。</p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    FORM
+  ======================================================== -->
+  <section class="x-sec x-apply">
+    <div class="x-wrap">
+      <p class="x-apply__pos" id="positionBadge" hidden>いま見ていた職種：<b id="positionLabel"></b></p>
+
+      <div class="x-apply__grid">
+        <a class="x-apply__card x-apply__card--line x-in" href="https://lin.ee/o2bAwTt" target="_blank" rel="noopener">
+          <span class="x-apply__tag">いちばんおすすめ</span>
+          <p class="x-apply__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44"><path d="M12 2C6.48 2 2 5.64 2 10.1c0 4 3.55 7.35 8.35 7.99.33.07.77.22.88.5.1.25.07.65.03.9l-.14.85c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.8C21.3 13.5 22 11.9 22 10.1 22 5.64 17.52 2 12 2z"/></svg></p>
+          <p class="x-apply__ttl">公式LINEで<br>カジュアル面談を予約</p>
+          <p class="x-apply__txt">友だち追加して、日程を送るだけ。<br>「まず話を聞いてみたい」だけでも大歓迎です。面談は人事の向井が担当します。</p>
+          <span class="x-apply__btn">LINEをひらく ↗</span>
+        </a>
+        <a class="x-apply__card x-in" href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener">
+          <p class="x-apply__icon x-apply__icon--w" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg></p>
+          <p class="x-apply__ttl">Wantedlyで<br>「話を聞きに行きたい」</p>
+          <p class="x-apply__txt">Wantedlyのアカウントをお持ちの方は、こちらからも気軽にどうぞ。</p>
+          <span class="x-apply__btn">Wantedlyをひらく ↗</span>
+        </a>
+      </div>
+
+      <div class="x-apply__steps x-in">
+        <p class="x-apply__steps-ttl">LINEでの予約は、この3ステップ</p>
+        <ol>
+          <li><b>1</b>上のボタンから、公式LINEを友だち追加</li>
+          <li><b>2</b>気になる職種と、面談できる日時を送る</li>
+          <li><b>3</b>向井から日程のご連絡。当日はオンラインで約60分</li>
+        </ol>
+        <p class="x-apply__note">履歴書などの書類は、面談のあとで大丈夫です。服装も自由です。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    FOOTER
+  ======================================================== -->
+  <footer class="l-footer">
+    <div class="l-inner">
+      <div class="l-footer__inner">
+        <div class="l-footer__left">
+          <div class="l-footer__logo">
+            <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span><em>採用サイト</em>
+          </div>
+          <p class="l-footer__catch">テクノロジーと共創の力で、社会課題に挑み続ける</p>
+          <div class="l-footer__sns">
+            <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" aria-label="Wantedly" class="l-footer__sns-item l-footer__sns-item--wantedly">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="l-footer__nav">
+          <ul>
+            <li><a href="business.html">OUR BUSINESS</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="people.html">PEOPLE</a></li>
+            <li><a href="culture.html">ENVIRONMENT</a></li><li><a href="workstyle.html">WORKSTYLE</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="recruit.html">RECRUIT</a></li>
+            <li><a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener">コーポレートサイト</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="l-footer__bottom">
+        <p class="l-footer__copy">&copy; 2026 Rise Tech Solutions Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260927x"></script>
+  <script src="pop.js?v=20260927x"></script>
+  <script>
+    // 求人ページから来た場合は、見ていた職種を表示
+    (function () {
+      const map = { beginner: '未経験エンジニア', experienced: '経験者エンジニア', sales: '営業担当', marketing: 'マーケティング担当' };
+      const pos = new URLSearchParams(location.search).get('position');
+      if (pos && map[pos]) {
+        document.getElementById('positionLabel').textContent = map[pos];
+        document.getElementById('positionBadge').hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>

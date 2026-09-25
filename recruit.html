@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO基本 ===== -->
+  <title>求人情報・採用詳細 | 採用サイト | 株式会社Rise Tech Solutions</title>
+  <meta name="description" content="Rise Tech Solutionsの求人詳細ページ。未経験エンジニア（月給22〜28万）・経験者エンジニア（年収450〜850万）・営業（年収380〜650万+インセンティブ）・マーケティング担当を募集中。副業OK・年間休日125日。">
+  <meta name="keywords" content="Rise Tech Solutions,求人,採用,エンジニア募集,営業募集,マーケティング,未経験歓迎,東京,IT転職">
+  <link rel="canonical" href="https://rt-solutions.co.jp/recruit/jobs/">
+
+  <!-- ===== OGP ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="求人情報・採用詳細 | 株式会社Rise Tech Solutions">
+  <meta property="og:description" content="未経験エンジニア・経験者エンジニア・営業・マーケティング担当を募集中。副業OK・年間休日125日。">
+  <meta property="og:url" content="https://rt-solutions.co.jp/recruit/jobs/">
+  <meta property="og:site_name" content="Rise Tech Solutions 採用サイト">
+  <meta property="og:image" content="https://rt-solutions.co.jp/recruit/images/team/team.jpg">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="求人情報 | Rise Tech Solutions">
+  <meta name="twitter:description" content="未経験歓迎・副業OK。Rise Tech Solutionsで一緒に社会課題に挑みませんか？">
+  <meta name="twitter:image" content="https://rt-solutions.co.jp/recruit/images/team/team.jpg">
+
+  <!-- ===== 構造化データ（求人情報） ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "JobPosting",
+        "title": "未経験エンジニア",
+        "description": "プログラミング未経験でも大丈夫。充実した研修制度でしっかりサポートします。",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "株式会社Rise Tech Solutions",
+          "sameAs": "https://rt-solutions.co.jp/"
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "中央区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+          }
+        },
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": "JPY",
+          "value": {
+            "@type": "QuantitativeValue",
+            "minValue": 2640000,
+            "maxValue": 5000000,
+            "unitText": "YEAR"
+          }
+        },
+        "employmentType": "FULL_TIME",
+        "jobLocationType": "TELECOMMUTE",
+        "datePosted": "2025-02-10",
+        "validThrough": "2025-12-31"
+      },
+      {
+        "@type": "JobPosting",
+        "title": "エンジニア経験者",
+        "description": "開発経験3年以上のエンジニアを募集。テックリードとしての活躍も歓迎。",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "株式会社Rise Tech Solutions",
+          "sameAs": "https://rt-solutions.co.jp/"
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "中央区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+          }
+        },
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": "JPY",
+          "value": {
+            "@type": "QuantitativeValue",
+            "minValue": 4500000,
+            "maxValue": 8500000,
+            "unitText": "YEAR"
+          }
+        },
+        "employmentType": "FULL_TIME",
+        "jobLocationType": "TELECOMMUTE",
+        "datePosted": "2025-02-10",
+        "validThrough": "2025-12-31"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css?v=20260927x">
+  <style>
+    /* ===== Recruit Page Styles ===== */
+    .recruit-hero {
+      background: linear-gradient(135deg, #0a1525 0%, #1c2c43 50%, #0d2340 100%);
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--header-h) + 80px) 0 100px;
+    }
+
+    .recruit-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,200,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,200,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .recruit-hero__blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .recruit-hero__blob--1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(0,212,200,.25) 0%, transparent 70%);
+      top: -150px; left: -100px;
+      animation: floatShape 12s ease-in-out infinite;
+    }
+
+    .recruit-hero__blob--2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(43,95,255,.2) 0%, transparent 70%);
+      bottom: -100px; right: 0;
+      animation: floatShape 9s ease-in-out infinite reverse;
+    }
+
+    .recruit-hero__inner {
+      position: relative; z-index: 1;
+      text-align: center;
+    }
+
+    .recruit-hero__en {
+      font-family: var(--font-en);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      color: #00d4c8;
+      margin-bottom: 16px;
+    }
+
+    .recruit-hero__title {
+      font-size: clamp(4rem, 7vw, 8rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, #fff 0%, #00d4c8 50%, #2b5fff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      margin-bottom: 24px;
+    }
+
+    .recruit-hero__sub {
+      font-size: 1.8rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.9;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .recruit-hero__tags {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    }
+
+    .recruit-hero__tag {
+      background: rgba(0,212,200,.15);
+      border: 1px solid rgba(0,212,200,.35);
+      color: #00d4c8;
+      font-family: var(--font-en);
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      padding: 8px 20px;
+      border-radius: 100px;
+    }
+
+    /* ===== Jump Nav ===== */
+    .recruit-nav {
+      background: #fff;
+      border-bottom: 1px solid var(--c-border);
+      position: sticky; top: var(--header-h); z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    .recruit-nav__list {
+      display: flex; overflow-x: auto;
+    }
+
+    .recruit-nav__item a {
+      display: block;
+      padding: 18px 28px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: .05em;
+      color: var(--c-text-mid);
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      transition: color .25s, border-color .25s;
+    }
+
+    .recruit-nav__item a:hover,
+    .recruit-nav__item.is-active a {
+      color: var(--c-teal-dark);
+      border-color: var(--c-teal);
+    }
+
+    /* ===== Job Section ===== */
+    .job-section {
+      padding: 100px 0 80px;
+      scroll-margin-top: calc(var(--header-h) + 60px);
+    }
+
+    .job-section:nth-child(even) { background: var(--c-bg); }
+
+    .job-section__head {
+      display: flex; align-items: flex-end; gap: 24px;
+      margin-bottom: 60px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--c-border);
+    }
+
+    .job-section__num {
+      font-family: var(--font-en);
+      font-size: 8rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #00d4c8 0%, #2b5fff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: .25;
+      flex-shrink: 0;
+    }
+
+    .job-section__title-group { flex: 1; }
+
+    .job-section__en {
+      font-family: var(--font-en);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--c-teal-dark);
+      margin-bottom: 8px;
+    }
+
+    .job-section__title {
+      font-size: clamp(2.8rem, 4vw, 4.2rem);
+      font-weight: 700;
+      color: var(--c-dark);
+      letter-spacing: .02em;
+    }
+
+    .job-section__salary-badge {
+      background: linear-gradient(135deg, #00867d 0%, #1a6acc 100%);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .job-section__salary-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      opacity: .8;
+      margin-bottom: 4px;
+    }
+
+    .job-section__salary-value {
+      font-family: var(--font-en);
+      font-size: 2rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .job-section__salary-note {
+      font-size: 1.1rem;
+      opacity: .7;
+      margin-top: 4px;
+    }
+
+    /* ===== Job Detail Grid ===== */
+    .job-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .job-detail__block {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 36px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.06);
+      border: 1px solid var(--c-border);
+      transition: transform .35s var(--spring), box-shadow .35s;
+    }
+
+    .job-section:nth-child(even) .job-detail__block { background: #fff; }
+
+    .job-detail__block:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(20,210,192,.12); }
+
+    .job-detail__block--full {
+      grid-column: 1 / -1;
+    }
+
+    .job-detail__icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,212,200,.15) 0%, rgba(43,95,255,.15) 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      color: var(--c-teal-dark);
+    }
+
+    .job-detail__icon svg { width: 22px; height: 22px; }
+
+    .job-detail__label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--c-teal-dark);
+      margin-bottom: 12px;
+    }
+
+    .job-detail__value {
+      font-size: 1.5rem;
+      color: var(--c-text);
+      line-height: 1.8;
+    }
+
+    .job-detail__value strong {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 4px;
+    }
+
+    .job-detail__list {
+      display: flex; flex-direction: column; gap: 8px;
+    }
+
+    .job-detail__list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 1.4rem;
+      color: var(--c-text);
+      line-height: 1.7;
+    }
+
+    .job-detail__list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d4c8, #2b5fff);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .job-detail__tag-list {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+
+    .job-detail__tag {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 4px 14px;
+      border-radius: 100px;
+      background: var(--c-teal-bg);
+      color: var(--c-teal-dark);
+      border: 1px solid rgba(20,210,192,.3);
+    }
+
+    /* ===== Application Flow ===== */
+    .flow-section {
+      padding: 100px 0;
+      background: var(--c-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flow-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,212,200,.05) 0%, rgba(43,95,255,.08) 100%);
+    }
+
+    .flow-section .c-section-head { position: relative; z-index: 1; }
+    .flow-section .c-section-head__en { color: rgba(255,255,255,.2); }
+    .flow-section .c-section-head__ja { color: #fff; }
+
+    .flow-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative; z-index: 1;
+    }
+
+    .flow-item {
+      position: relative;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .flow-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 36px;
+      right: -16px;
+      width: 32px; height: 2px;
+      background: linear-gradient(90deg, #00d4c8, #2b5fff);
+      z-index: 1;
+    }
+
+    .flow-item__num {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00d4c8 0%, #2b5fff 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-en);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 auto 20px;
+      position: relative; z-index: 2;
+      box-shadow: 0 4px 20px rgba(0,212,200,.4);
+    }
+
+    .flow-item__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .flow-item__desc {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+    }
+
+    /* ===== Wantedly Banner ===== */
+    .wantedly-banner {
+      padding: 80px 0;
+      background: var(--c-bg);
+    }
+
+    .wantedly-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      box-shadow: 0 4px 32px rgba(0,0,0,.08);
+      border: 1px solid var(--c-border);
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wantedly-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #00a887, #00867d);
+    }
+
+    .wantedly-card__logo {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .wantedly-card__logo svg {
+      width: 32px; height: 32px;
+      color: #00a887;
+    }
+
+    .wantedly-card__logo span {
+      font-family: var(--font-en);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00a887;
+      letter-spacing: .02em;
+    }
+
+    .wantedly-card__title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 12px;
+    }
+
+    .wantedly-card__desc {
+      font-size: 1.5rem;
+      color: var(--c-text-mid);
+      line-height: 1.9;
+    }
+
+    .wantedly-card__btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #00a887;
+      color: #fff;
+      padding: 18px 36px;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: transform .35s var(--spring), box-shadow .35s;
+      box-shadow: 0 6px 24px rgba(0,168,135,.3);
+      flex-shrink: 0;
+    }
+
+    .wantedly-card__btn:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,168,135,.45); }
+
+    /* ===== Benefits summary ===== */
+    .benefits-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      border-radius: 12px;
+      padding: 32px 28px;
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      transition: transform .35s var(--spring), box-shadow .35s;
+    }
+
+    .benefit-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(20,210,192,.1); }
+
+    .benefit-card__icon {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
+      color: var(--c-teal-dark);
+      transition: transform .35s var(--spring), color .25s;
+    }
+    .benefit-card__icon svg {
+      width: 100%; height: 100%;
+    }
+    .benefit-card:hover .benefit-card__icon {
+      transform: scale(1.15) rotate(-8deg);
+      color: var(--c-teal);
+    }
+
+    .benefit-card__title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 10px;
+    }
+
+    .benefit-card__desc {
+      font-size: 1.3rem;
+      color: var(--c-text-mid);
+      line-height: 1.8;
+    }
+
+    /* ===== Job Apply CTA ===== */
+    .job-apply-cta {
+      margin-top: 48px;
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(0,212,200,.08) 0%, rgba(43,95,255,.08) 100%);
+      border: 1px solid rgba(20,210,192,.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .job-apply-cta__text { flex: 1; }
+    .job-apply-cta__label {
+      font-family: var(--font-en);
+      font-size: 1rem;
+      letter-spacing: .2em;
+      color: var(--c-teal);
+      margin-bottom: 6px;
+    }
+    .job-apply-cta__title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--c-dark);
+    }
+    .job-apply-cta__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #00d4c8 0%, #2b5fff 100%);
+      border-radius: 60px;
+      text-decoration: none;
+      transition: transform .3s var(--spring), box-shadow .3s;
+      box-shadow: 0 6px 24px rgba(0,212,200,.3);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .job-apply-cta__btn:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,212,200,.42); }
+    .job-apply-cta__btn svg { width: 18px; height: 18px; transition: transform .3s; }
+    .job-apply-cta__btn:hover svg { transform: translateX(4px); }
+    .job-apply-cta__wantedly {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #00a887;
+      border: 2px solid #00a887;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: background .25s, color .25s;
+      flex-shrink: 0;
+    }
+    .job-apply-cta__wantedly:hover { background: #00a887; color: #fff; }
+    @media (max-width: 768px) {
+      .job-apply-cta { flex-direction: column; text-align: center; padding: 28px 24px; }
+      .job-apply-cta__btn { width: 100%; justify-content: center; }
+      .job-apply-cta__wantedly { width: 100%; justify-content: center; }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .flow-list { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .flow-item:nth-child(3)::after { display: none; }
+      .flow-item:nth-child(4)::after,
+      .flow-item:nth-child(5) { }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 767px) {
+      .recruit-hero { padding: calc(var(--header-h) + 48px) 0 60px; }
+      .job-section__head { flex-wrap: wrap; align-items: flex-start; }
+      .job-section__salary-badge { width: 100%; }
+      .job-section__num { font-size: 5rem; }
+      .job-detail { grid-template-columns: 1fr; }
+      .job-detail__block--full { grid-column: auto; }
+      .flow-list { grid-template-columns: 1fr; gap: 24px; }
+      .flow-item::after { display: none !important; }
+      .wantedly-card { grid-template-columns: 1fr; padding: 36px 24px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .recruit-nav__item a { padding: 14px 18px; }
+    }
+  </style>
+  <link rel="stylesheet" href="pop.css?v=20260927x">
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ========================================================
+    HEADER
+  ======================================================== -->
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <p class="l-header__logo">
+        <a href="index.html">
+          <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+          <em>採用サイト</em>
+        </a>
+      </p>
+
+      <nav class="l-gnav" id="gnav">
+        <ul class="l-gnav__list">
+          <li class="l-gnav__has-dropdown">
+            <a href="business.html"><span class="en">WORK</span><span class="ja">仕事を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="business-solution.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">ソリューション事業部</span><span class="l-gnav__dropdown-desc">受託開発・SES。要件定義から保守まで</span></a>
+              <a href="business-product.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">プロダクト事業部</span><span class="l-gnav__dropdown-desc">自社SaaS「En Root」を企画から開発・運営</span></a>
+              <a href="business-consulting.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">コンサルティング事業部</span><span class="l-gnav__dropdown-desc">CSO伴走・経営×ITコンサル</span></a>
+              <a href="business-bpo.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">BPO事業部</span><span class="l-gnav__dropdown-desc">事務・経理代行と1on1メンタリング</span></a>
+            </div>
+          </li>
+          <li><a href="about.html"><span class="en">ABOUT</span><span class="ja">会社を知る</span></a></li>
+          <li><a href="people.html"><span class="en">PEOPLE</span><span class="ja">働く仲間を知る</span></a></li>
+          <li><a href="culture.html"><span class="en">CULTURE</span><span class="ja">環境を知る</span></a></li>
+          <li class="l-gnav__has-dropdown">
+            <a href="workstyle.html"><span class="en">WORKSTYLE</span><span class="ja">働き方を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="workstyle.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">数字で見る働き方</span><span class="l-gnav__dropdown-desc">残業・休日の実績を正直に公開</span></a>
+              <a href="recruit.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">1日のスケジュール</span><span class="l-gnav__dropdown-desc">職種ごとのリアルな1日の流れ</span></a>
+              <a href="culture.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">福利厚生・研修制度</span><span class="l-gnav__dropdown-desc">使われている制度だけを紹介</span></a>
+              <a href="culture.html#env-career" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">キャリアパス</span><span class="l-gnav__dropdown-desc">未経験から経営層まで、実例で見る成長の道筋</span></a>
+            </div>
+          </li>
+          <li><a href="news.html"><span class="en">NEWS</span><span class="ja">お知らせ</span></a></li>
+          <li class="is-active"><a href="recruit.html"><span class="en">RECRUIT</span><span class="ja">採用情報</span></a></li>
+        </ul>
+        <div class="l-gnav__btns">
+          <a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener" class="btn-corp">コーポレートサイト</a>
+          <a href="entry-form.html" class="btn-entry js-magnetic">ENTRY</a>
+        </div>
+      </nav>
+
+      <button class="l-header__hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- custom cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- ========================================================
+    HERO
+  ======================================================== -->
+  <section class="recruit-hero">
+    <div class="recruit-hero__blob recruit-hero__blob--1"></div>
+    <div class="recruit-hero__blob recruit-hero__blob--2"></div>
+    <div class="l-inner recruit-hero__inner">
+      <p class="recruit-hero__en">CAREER OPPORTUNITIES</p>
+      <h1 class="recruit-hero__title">未経験は、<br>まだ経験してないだけ。</h1>
+      <p class="recruit-hero__sub">
+        まずは気になるポジションを読んでみてください。<br>
+        「これかも」と思ったら、気軽に応募してみてください。
+      </p>
+      <div class="recruit-hero__tags">
+        <span class="recruit-hero__tag">未経験歓迎</span>
+        <span class="recruit-hero__tag">経験者優遇</span>
+        <span class="recruit-hero__tag">年間休日125日</span>
+        <span class="recruit-hero__tag">副業OK</span>
+        <span class="recruit-hero__tag">研修充実</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    JUMP NAV
+  ======================================================== -->
+  <nav class="recruit-nav" id="recruitNav">
+    <div class="l-inner">
+      <ul class="recruit-nav__list">
+        <li class="recruit-nav__item is-active"><a href="#beginner">未経験エンジニア</a></li>
+        <li class="recruit-nav__item"><a href="#experienced">経験者エンジニア</a></li>
+        <li class="recruit-nav__item"><a href="#sales">営業担当</a></li>
+        <li class="recruit-nav__item"><a href="#marketing">マーケティング担当</a></li>
+        <li class="recruit-nav__item"><a href="#flow">選考フロー</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+    JOB SUMMARY — 給与・勤務地・雇用形態・休日を最初に一覧
+    （候補者は勤務地/給与/雇用形態/休日で絞り込む→仕事内容の詳細で応募を決める）
+  ======================================================== -->
+  <section class="job-summary">
+    <div class="l-inner">
+      <div class="job-summary__head">
+        <p class="job-summary__en">AT A GLANCE</p>
+        <h2 class="job-summary__title">まず、条件から。</h2>
+        <p class="job-summary__lead">最初に気になる「給与・勤務地・休日」を先に全部出します。<br>条件が合いそうなら、仕事内容の詳細をじっくり読んでください。</p>
+      </div>
+      <div class="job-summary__scroll">
+        <table class="job-summary__table">
+          <thead>
+            <tr>
+              <th>職種</th>
+              <th>給与</th>
+              <th>勤務地</th>
+              <th>雇用形態</th>
+              <th>休日</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>未経験エンジニア</th>
+              <td><strong>月給 22万〜28万円</strong></td>
+              <td>東京・築地</td>
+              <td>正社員</td>
+              <td>土日祝／年間休日125日</td>
+              <td><a href="#beginner" class="job-summary__link">詳細へ</a></td>
+            </tr>
+            <tr>
+              <th>経験者エンジニア</th>
+              <td><strong>年収 450万〜850万円</strong></td>
+              <td>東京・築地</td>
+              <td>正社員</td>
+              <td>土日祝／年間休日125日</td>
+              <td><a href="#experienced" class="job-summary__link">詳細へ</a></td>
+            </tr>
+            <tr>
+              <th>営業担当</th>
+              <td><strong>年収 380万〜650万円</strong><span>＋インセンティブ</span></td>
+              <td>東京・築地</td>
+              <td>正社員</td>
+              <td>土日祝／年間休日125日</td>
+              <td><a href="#sales" class="job-summary__link">詳細へ</a></td>
+            </tr>
+            <tr>
+              <th>マーケティング担当</th>
+              <td><strong>年収 350万〜600万円</strong></td>
+              <td>東京・築地</td>
+              <td>正社員</td>
+              <td>土日祝／年間休日125日</td>
+              <td><a href="#marketing" class="job-summary__link">詳細へ</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="job-summary__note">※ フレックスタイム制（コアタイム13:00〜16:00）／全職種共通</p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    01 — 未経験エンジニア
+  ======================================================== -->
+  <section class="job-section" id="beginner">
+    <div class="l-inner">
+      <div class="job-section__head">
+        <div class="job-section__num">01</div>
+        <div class="job-section__title-group">
+          <p class="job-section__en">BEGINNER ENGINEER</p>
+          <h2 class="job-section__title">未経験エンジニア募集</h2>
+        </div>
+        <div class="job-section__salary-badge">
+          <p class="job-section__salary-label">SALARY</p>
+          <p class="job-section__salary-value">月給 22万〜28万円</p>
+          <p class="job-section__salary-note">年収目安：264万〜500万円</p>
+        </div>
+      </div>
+
+      <figure class="job-section__photo">
+        <img src="images/recruit/beginner.jpg" alt="" loading="lazy" style="object-position:center 28%">
+        <figcaption>先輩エンジニアが隣でサポート。未経験からの現場デビューを支えます。</figcaption>
+      </figure>
+
+      <div class="job-detail">
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <p class="job-detail__label">仕事内容</p>
+          <ul class="job-detail__list">
+            <li>Webシステム・アプリケーション開発（Java / Python / TypeScript 等）</li>
+            <li>先輩エンジニアによるOJTサポート付き</li>
+            <li>チーム開発の一員として設計・実装・テスト工程に参加</li>
+            <li>自社サービスの機能開発・改善提案</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <p class="job-detail__label">求める人物像</p>
+          <ul class="job-detail__list">
+            <li>学習意欲が高く、成長したい方</li>
+            <li>チームで協力して目標達成したい方</li>
+            <li>テクノロジーで社会を良くしたいという想いがある方</li>
+            <li>失敗を恐れず挑戦できる方</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <p class="job-detail__label">必須・歓迎スキル</p>
+          <div>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">必須</p>
+            <ul class="job-detail__list" style="margin-bottom:16px;">
+              <li>高卒以上、学歴・専攻不問</li>
+              <li>PC基本操作ができる方</li>
+            </ul>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">歓迎</p>
+            <ul class="job-detail__list">
+              <li>プログラミングの独学経験・スクール受講経験</li>
+              <li>GitHub等のバージョン管理ツール利用経験</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="job-detail__label">勤務条件</p>
+          <div class="job-detail__value">
+            <strong>月給 22万〜28万円</strong>
+            <p>試用期間3ヶ月（同条件）</p>
+            <p>昇給：年1回 / 賞与：年2回</p>
+            <p style="margin-top:10px;">勤務時間：10:00〜19:00（フレックス制・コアタイム13〜16時）</p>
+            <p>勤務地：東京・築地本社</p>
+            <p>休日：土日祝・年間休日125日</p>
+          </div>
+        </div>
+
+        <div class="job-detail__block job-detail__block--full">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="job-detail__label">研修制度・待遇</p>
+          <div class="job-detail__tag-list">
+            <span class="job-detail__tag">入社前研修（3ヶ月）</span>
+            <span class="job-detail__tag">メンター制度</span>
+            <span class="job-detail__tag">資格取得支援（全額補助）</span>
+            <span class="job-detail__tag">技術書購入補助</span>
+            <span class="job-detail__tag">社内勉強会</span>
+            <span class="job-detail__tag">副業OK</span>
+            <span class="job-detail__tag">交通費全額支給</span>
+            <span class="job-detail__tag">健康保険・厚生年金完備</span>
+            <span class="job-detail__tag">確定拠出年金</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 働き方の実数（RJP）※残業・有休は実績値に差し替えてください -->
+      <div class="job-reality">
+        <p class="job-reality__title">働き方の実数<span>数字で見る、入社後のリアル</span></p>
+        <ul class="job-reality__list">
+          <li><strong>14.2h</strong><span>月平均残業<em>※直近1年実績</em></span></li>
+          <li><strong>125日</strong><span>年間休日</span></li>
+          <li><strong>85%</strong><span>有休取得率</span></li>
+        </ul>
+      </div>
+
+      <!-- 1日のスケジュール -->
+      <!-- ソリューション事業部のキャリア例（Canva資料より） -->
+      <div class="x-career" id="career">
+        <p class="x-career__label">CAREER — ソリューション事業部</p>
+        <h3 class="x-career__title">入社してから、<br>こんなふうに<em>ステップアップ</em>しています。</h3>
+        <p class="x-career__lead">ソリューション事業部のキャリア例です。担当する仕事と、各時点の年収をまとめました。</p>
+        <div class="x-career__tabs" role="tablist">
+          <button class="x-career__tab is-active" role="tab" aria-selected="true" aria-controls="career-tokyo">東京本社</button>
+          <button class="x-career__tab" role="tab" aria-selected="false" aria-controls="career-kumamoto">熊本支店</button>
+        </div>
+        <div class="x-career__panel is-active" id="career-tokyo" role="tabpanel">
+          <div class="x-career__ex">
+            <div class="x-career__bar"><span class="x-career__no">キャリア例<b>1</b></span><p>未経験から開発エンジニア その1</p></div>
+            <div class="x-career__row">
+              <div class="x-career__who"><span class="x-career__avatar x-career__avatar--pink">A.K</span><small>A.Kさん</small></div>
+              <ol class="x-career__steps">
+                <li style="--h:51%"><span class="x-career__role">テスター</span><span class="x-career__when">6ヶ月後</span><span class="x-career__pay">300<small>万円</small></span></li>
+                <li style="--h:61%"><span class="x-career__role">フロントエンド開発</span><span class="x-career__when">2年目</span><span class="x-career__pay">360<small>万円</small></span></li>
+                <li style="--h:66%"><span class="x-career__role">バックエンド開発</span><span class="x-career__when">3年目</span><span class="x-career__pay">396<small>万円</small></span></li>
+                <li style="--h:72%"><span class="x-career__role">フルスタック開発</span><span class="x-career__when">4年目</span><span class="x-career__pay">432<small>万円</small></span></li>
+                <li style="--h:82%"><span class="x-career__role">VPoE補佐</span><span class="x-career__when">5年目</span><span class="x-career__pay">496<small>万円</small></span></li>
+              </ol>
+            </div>
+          </div>
+          <div class="x-career__ex">
+            <div class="x-career__bar"><span class="x-career__no">キャリア例<b>2</b></span><p>未経験から開発エンジニア その2</p></div>
+            <div class="x-career__row">
+              <div class="x-career__who"><span class="x-career__avatar x-career__avatar--yellow">K.I</span><small>K.Iさん</small></div>
+              <ol class="x-career__steps">
+                <li style="--h:51%"><span class="x-career__role">VBA開発</span><span class="x-career__when">6ヶ月目</span><span class="x-career__pay">300<small>万円</small></span></li>
+                <li style="--h:55%"><span class="x-career__role">Web制作</span><span class="x-career__when">2年目</span><span class="x-career__pay">324<small>万円</small></span></li>
+                <li style="--h:77%"><span class="x-career__role">フルスタック開発</span><span class="x-career__when">3年目</span><span class="x-career__pay">468<small>万円</small></span></li>
+                <li style="--h:89%"><span class="x-career__role">テックリードエンジニア</span><span class="x-career__when">4年目</span><span class="x-career__pay">540<small>万円</small></span></li>
+                <li style="--h:100%"><span class="x-career__role">統括責任者</span><span class="x-career__when">5年目</span><span class="x-career__pay">612<small>万円</small></span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="x-career__panel" id="career-kumamoto" role="tabpanel">
+          <div class="x-career__ex">
+            <div class="x-career__bar"><span class="x-career__no">キャリア例<b>1</b></span><p>未経験から開発エンジニア その1</p></div>
+            <div class="x-career__row">
+              <div class="x-career__who"><span class="x-career__avatar x-career__avatar--pink">A.K</span><small>A.Kさん</small></div>
+              <ol class="x-career__steps">
+                <li style="--h:51%"><span class="x-career__role">テスター</span><span class="x-career__when">6ヶ月後</span><span class="x-career__pay">300<small>万円</small></span></li>
+                <li style="--h:61%"><span class="x-career__role">フロントエンド開発</span><span class="x-career__when">2年目</span><span class="x-career__pay">360<small>万円</small></span></li>
+                <li style="--h:64%"><span class="x-career__role">バックエンド開発</span><span class="x-career__when">3年目</span><span class="x-career__pay">380<small>万円</small></span></li>
+                <li style="--h:72%"><span class="x-career__role">フルスタック開発</span><span class="x-career__when">4年目</span><span class="x-career__pay">432<small>万円</small></span></li>
+                <li style="--h:80%"><span class="x-career__role">VPoE補佐</span><span class="x-career__when">5年目</span><span class="x-career__pay">482<small>万円</small></span></li>
+              </ol>
+            </div>
+          </div>
+          <div class="x-career__ex">
+            <div class="x-career__bar"><span class="x-career__no">キャリア例<b>2</b></span><p>経験者 その1</p></div>
+            <div class="x-career__row">
+              <div class="x-career__who"><span class="x-career__avatar x-career__avatar--yellow">K.K</span><small>K.Kさん</small></div>
+              <ol class="x-career__steps">
+                <li style="--h:55%"><span class="x-career__role">バックエンド開発</span><span class="x-career__when">6ヶ月目</span><span class="x-career__pay">324<small>万円</small></span></li>
+                <li style="--h:61%"><span class="x-career__role">フルスタック制作</span><span class="x-career__when">2年目</span><span class="x-career__pay">360<small>万円</small></span></li>
+                <li style="--h:64%"><span class="x-career__role">テックリード</span><span class="x-career__when">3年目</span><span class="x-career__pay">380<small>万円</small></span></li>
+                <li style="--h:70%"><span class="x-career__role">テックリードエンジニア</span><span class="x-career__when">4年目</span><span class="x-career__pay">420<small>万円</small></span></li>
+                <li style="--h:98%"><span class="x-career__role">統括責任者</span><span class="x-career__when">5年目</span><span class="x-career__pay">600<small>万円</small></span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <p class="x-career__note">※年収は各時点の例です。</p>
+      </div>
+
+      <div class="job-day">
+        <p class="job-day__title">1日のスケジュール<span>とある1日の流れ（フレックスの一例）</span></p>
+        <ol class="job-day__timeline">
+          <li><time>10:00</time><div><strong>出社・朝会</strong><span>チームで今日のタスクを確認</span></div></li>
+          <li><time>10:30</time><div><strong>研修 or 実装</strong><span>入社3ヶ月は社内講師の研修。以降はペアで実装</span></div></li>
+          <li class="job-day__timeline--photo"><time>13:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">先輩と気軽にランチ！</span><img src="images/team/加藤さんと岩本さん.jpg" alt="" loading="lazy" style="object-position:center 30%"></div><div><strong>ランチ</strong><span>カフェスペースで先輩と。1人で食べたい日はそれもOK</span></div></li>
+          <li class="job-day__timeline--photo"><time>14:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">わからない所はすぐ聞けるよ</span><img src="images/recruit/kato-work.jpg" alt="" loading="lazy" style="object-position:center 40%"></div><div><strong>実装・メンター1on1</strong><span>週2回、30分の1on1。詰まっている所をその場で解消</span></div></li>
+          <li><time>17:30</time><div><strong>コードレビュー</strong><span>先輩のレビューで書いた分だけ学びに変わる</span></div></li>
+          <li><time>19:00</time><div><strong>退勤</strong><span>翌日のTODOを残して終了。残業は月平均14h程度</span></div></li>
+        </ol>
+      </div>
+
+      <!-- 一緒に働く仲間 -->
+      <div class="job-team">
+        <p class="job-team__title">一緒に働く仲間<span>未経験から入った先輩たち</span></p>
+        <div class="job-team__grid">
+          <a class="job-team__card" href="people-02.html">
+            <img src="images/個人写真/勝木.jpg" alt="勝木 はるな" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>勝木 はるな</strong>
+              <span>フロントエンドエンジニア／官庁出身</span>
+              <em>「未経験でも、論理的思考は武器になる」</em>
+            </div>
+          </a>
+          <a class="job-team__card" href="people-03.html">
+            <img src="images/個人写真/熊谷.jpg" alt="熊谷 洸介" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>熊谷 洸介</strong>
+              <span>サブマネージャー兼 社内講師</span>
+              <em>「研修はぼくが担当します。全部聞いてください」</em>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 正直な話（Realistic Job Preview） -->
+      <div class="job-rjp">
+        <p class="job-rjp__title">正直な話。<span>いいことだけ書いても、入社後がつらいので</span></p>
+        <ul class="job-rjp__list">
+          <li>最初の3ヶ月は課題量が多いです。「思ったよりハード」という声は正直あります。</li>
+          <li>現場配属直後は分からないことだらけの時期が必ず来ます。</li>
+        </ul>
+        <p class="job-rjp__last">それでも、隣に必ず先輩がいます。未経験入社の先輩の9割が3ヶ月で現場デビューしているのは、放置しない仕組みがあるからです。</p>
+      </div>
+
+      <div class="job-apply-cta">
+        <div class="job-apply-cta__text">
+          <p class="job-apply-cta__label">APPLY NOW</p>
+          <p class="job-apply-cta__title">この求人にエントリーする</p>
+        </div>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="job-apply-cta__wantedly">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+          Wantedlyで応募
+        </a>
+        <a href="entry-form.html?position=beginner" class="job-apply-cta__btn">
+          応募・面談予約へ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    02 — エンジニア経験者
+  ======================================================== -->
+  <section class="job-section" id="experienced">
+    <div class="l-inner">
+      <div class="job-section__head">
+        <div class="job-section__num">02</div>
+        <div class="job-section__title-group">
+          <p class="job-section__en">EXPERIENCED ENGINEER</p>
+          <h2 class="job-section__title">エンジニア経験者募集</h2>
+        </div>
+        <div class="job-section__salary-badge">
+          <p class="job-section__salary-label">SALARY</p>
+          <p class="job-section__salary-value">年収 450万〜850万円</p>
+          <p class="job-section__salary-note">スキル・経験に応じて決定</p>
+        </div>
+      </div>
+
+      <a class="x-career-link" href="#career">
+        <span class="x-career-link__tag">CAREER</span>
+        <span class="x-career-link__text"><strong>入社後のキャリア例と年収を見る</strong>経験者入社から5年目で統括責任者・年収600万円の例も</span>
+        <span class="x-career-link__arrow">↑</span>
+      </a>
+
+      <figure class="job-section__photo">
+        <img src="images/recruit/experienced.jpg" alt="" loading="lazy" style="object-position:center 42%">
+        <figcaption>設計から実装まで。技術で勝負したい人のためのポジションです。</figcaption>
+      </figure>
+
+      <div class="job-detail">
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <p class="job-detail__label">仕事内容</p>
+          <ul class="job-detail__list">
+            <li>大規模Webサービスの設計・開発・アーキテクチャ提案</li>
+            <li>クラウドネイティブ（AWS / GCP / Azure）インフラ設計・構築</li>
+            <li>テックリードとして若手メンバーへの技術指導</li>
+            <li>新規自社プロダクトのコアエンジン開発</li>
+            <li>AI・機械学習モデルの実装・API連携</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="job-detail__label">必須スキル</p>
+          <ul class="job-detail__list">
+            <li>開発実務経験3年以上</li>
+            <li>Java / Python / TypeScript / Go のいずれかのプロダクション経験</li>
+            <li>RDBMSの設計・チューニング経験</li>
+            <li>Git を使ったチーム開発経験</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <p class="job-detail__label">歓迎スキル</p>
+          <div class="job-detail__tag-list">
+            <span class="job-detail__tag">React / Next.js</span>
+            <span class="job-detail__tag">AWS認定資格</span>
+            <span class="job-detail__tag">Kubernetes</span>
+            <span class="job-detail__tag">機械学習</span>
+            <span class="job-detail__tag">LLM連携</span>
+            <span class="job-detail__tag">スクラム経験</span>
+            <span class="job-detail__tag">OSS貢献</span>
+          </div>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="job-detail__label">勤務条件</p>
+          <div class="job-detail__value">
+            <strong>年収 450万〜850万円</strong>
+            <p>月給制・スキル・経験に応じて個別相談</p>
+            <p>昇給：随時（評価連動）/ 賞与：年2回</p>
+            <p>勤務地：東京・築地本社</p>
+            <p>休日：土日祝・年間休日125日・有給取得率85%</p>
+          </div>
+        </div>
+
+        <div class="job-detail__block job-detail__block--full">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="job-detail__label">待遇・その他</p>
+          <div class="job-detail__tag-list">
+            <span class="job-detail__tag">テックリード手当（月3万）</span>
+            <span class="job-detail__tag">資格取得支援（全額補助）</span>
+            <span class="job-detail__tag">カンファレンス参加費補助</span>
+            <span class="job-detail__tag">副業OK</span>
+            <span class="job-detail__tag">株式付与制度</span>
+            <span class="job-detail__tag">技術書購入補助（年10万）</span>
+            <span class="job-detail__tag">健康保険・厚生年金完備</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 働き方の実数（RJP）※残業・有休は実績値に差し替えてください -->
+      <div class="job-reality">
+        <p class="job-reality__title">働き方の実数<span>数字で見る、入社後のリアル</span></p>
+        <ul class="job-reality__list">
+          <li><strong>15.8h</strong><span>月平均残業<em>※直近1年実績</em></span></li>
+          <li><strong>125日</strong><span>年間休日</span></li>
+          <li><strong>85%</strong><span>有休取得率</span></li>
+        </ul>
+      </div>
+
+      <!-- 1日のスケジュール -->
+      <div class="job-day">
+        <p class="job-day__title">1日のスケジュール<span>とある1日の流れ（フレックスの一例）</span></p>
+        <ol class="job-day__timeline">
+          <li><time>10:00</time><div><strong>朝会・タスク整理</strong><span>デイリースタンドアップで、今日の動きを共有</span></div></li>
+          <li class="job-day__timeline--photo"><time>10:30</time><div class="job-day__photo-wrap"><span class="job-day__bubble">午前は誰にも邪魔されない集中タイム</span><img src="images/recruit/kato-work.jpg" alt="" loading="lazy" style="object-position:center 40%"></div><div><strong>設計・実装</strong><span>午前は集中タイム。MTGを入れない文化</span></div></li>
+          <li><time>13:00</time><div><strong>ランチ</strong><span>気分転換に外に出る人も、オフィスでゆっくりする人も</span></div></li>
+          <li class="job-day__timeline--photo"><time>14:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">設計から任されるのがRTSらしさ</span><img src="images/offices/office-tokyo-mtg.jpg" alt="" loading="lazy"></div><div><strong>コードレビュー・技術検討</strong><span>アーキテクチャの意思決定に最初から関われます</span></div></li>
+          <li><time>16:00</time><div><strong>クライアント定例 or チーム同期</strong><span>週次で顧客と直接話す機会あり</span></div></li>
+          <li><time>19:00</time><div><strong>退勤</strong><span>リリース前以外は定時前後で上がる人が多数</span></div></li>
+        </ol>
+      </div>
+
+      <!-- 一緒に働く仲間 -->
+      <div class="job-team">
+        <p class="job-team__title">一緒に働く仲間<span>技術をリードするメンバー</span></p>
+        <div class="job-team__grid">
+          <a class="job-team__card" href="people-03.html">
+            <img src="images/個人写真/熊谷.jpg" alt="熊谷 洸介" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>熊谷 洸介</strong>
+              <span>サブマネージャー／元フリーランス</span>
+              <em>「組織でやる方が、圧倒的に大きいことができる」</em>
+            </div>
+          </a>
+          <a class="job-team__card" href="people.html">
+            <img src="images/個人写真/青木.jpg" alt="青木 耶雲" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>青木 耶雲</strong>
+              <span>エンジニア／製造業から転身</span>
+              <em>「現場を知る人間の設計は強い」</em>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 正直な話（Realistic Job Preview） -->
+      <div class="job-rjp">
+        <p class="job-rjp__title">正直な話。<span>いいことだけ書いても、入社後がつらいので</span></p>
+        <ul class="job-rjp__list">
+          <li>少数精鋭です。裁量が大きい分、責任も大きい。「言われたものを作るだけ」がしたい人には向きません。</li>
+          <li>整っていない仕組みは自分で作る側に回ります。</li>
+        </ul>
+        <p class="job-rjp__last">その代わり、実力があれば止めません。入社半年でサブマネージャーを任せた実績があります。</p>
+      </div>
+
+      <div class="job-apply-cta">
+        <div class="job-apply-cta__text">
+          <p class="job-apply-cta__label">APPLY NOW</p>
+          <p class="job-apply-cta__title">この求人にエントリーする</p>
+        </div>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="job-apply-cta__wantedly">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+          Wantedlyで応募
+        </a>
+        <a href="entry-form.html?position=experienced" class="job-apply-cta__btn">
+          応募・面談予約へ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    03 — 営業担当
+  ======================================================== -->
+  <section class="job-section" id="sales">
+    <div class="l-inner">
+      <div class="job-section__head">
+        <div class="job-section__num">03</div>
+        <div class="job-section__title-group">
+          <p class="job-section__en">SALES</p>
+          <h2 class="job-section__title">営業担当募集</h2>
+        </div>
+        <div class="job-section__salary-badge">
+          <p class="job-section__salary-label">SALARY</p>
+          <p class="job-section__salary-value">年収 380万〜650万円</p>
+          <p class="job-section__salary-note">+ インセンティブ（上限なし）</p>
+        </div>
+      </div>
+
+      <figure class="job-section__photo">
+        <img src="images/recruit/sales.jpg" alt="" loading="lazy" style="object-position:center 30%">
+        <figcaption>お客様と正面から向き合う。聞く力が武器になる仕事です。</figcaption>
+      </figure>
+
+      <div class="job-detail">
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.13 9.81 19.79 19.79 0 011.07 1.22 2 2 0 013.06 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121 16z"/></svg>
+          </div>
+          <p class="job-detail__label">仕事内容</p>
+          <ul class="job-detail__list">
+            <li>法人向けITソリューション・開発案件の新規開拓営業</li>
+            <li>既存顧客へのアップセル・リレーション強化</li>
+            <li>エンジニアチームと連携しながら提案書作成・プレゼン</li>
+            <li>自社サービス（AIソリューション等）の販売促進</li>
+            <li>商談から契約・フォローまでワンストップ対応</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <p class="job-detail__label">求める人物像</p>
+          <ul class="job-detail__list">
+            <li>顧客課題を深く理解し、ソリューション提案ができる方</li>
+            <li>数字に責任を持ち、目標達成にコミットできる方</li>
+            <li>テクノロジーへの興味関心がある方</li>
+            <li>前向きで成長意欲が高い方（業界未経験可）</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <p class="job-detail__label">必須・歓迎スキル</p>
+          <div>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">必須</p>
+            <ul class="job-detail__list" style="margin-bottom:16px;">
+              <li>営業経験2年以上（業界不問）</li>
+              <li>Officeツール（Excel / Word / PowerPoint）の基本操作</li>
+            </ul>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">歓迎</p>
+            <ul class="job-detail__list">
+              <li>IT業界・SES・ソフトウェア開発会社での営業経験</li>
+              <li>法人向け新規開拓・インサイドセールス経験</li>
+              <li>SalesforceなどCRM活用経験</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="job-detail__label">勤務条件</p>
+          <div class="job-detail__value">
+            <strong>年収 380万〜650万円</strong>
+            <p>インセンティブ：目標達成度に応じ上限なし</p>
+            <p>昇給：年2回 / 賞与：年2回</p>
+            <p style="margin-top:10px;">勤務時間：10:00〜19:00（フレックス可）</p>
+            <p>勤務地：東京・築地本社</p>
+            <p>休日：土日祝・年間休日125日</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 働き方の実数（RJP）※残業・有休は実績値に差し替えてください -->
+      <div class="job-reality">
+        <p class="job-reality__title">働き方の実数<span>数字で見る、入社後のリアル</span></p>
+        <ul class="job-reality__list">
+          <li><strong>18.5h</strong><span>月平均残業<em>※直近1年実績</em></span></li>
+          <li><strong>125日</strong><span>年間休日</span></li>
+          <li><strong>82%</strong><span>有休取得率</span></li>
+        </ul>
+      </div>
+
+      <!-- 1日のスケジュール -->
+      <div class="job-day">
+        <p class="job-day__title">1日のスケジュール<span>とある1日の流れ（フレックスの一例）</span></p>
+        <ol class="job-day__timeline">
+          <li><time>09:30</time><div><strong>出社・商談準備</strong><span>当日の商談資料と顧客情報を最終確認</span></div></li>
+          <li class="job-day__timeline--photo"><time>10:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">困った案件はみんなで考えるよ</span><img src="images/offices/office-tokyo-mtg.jpg" alt="" loading="lazy"></div><div><strong>チームMTG</strong><span>案件の進捗共有。困っている案件はチームで作戦会議</span></div></li>
+          <li><time>11:00</time><div><strong>商談（オンライン中心）</strong><span>1日2〜3件。移動よりも提案準備に時間を使うスタイル</span></div></li>
+          <li><time>13:00</time><div><strong>ランチ</strong><span>気分転換に外に出る人も、オフィスでゆっくりする人も</span></div></li>
+          <li class="job-day__timeline--photo"><time>14:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">エンジニアと一緒に提案、心強い</span><img src="images/offices/office-tokyo-bar.jpg" alt="" loading="lazy"></div><div><strong>提案書作成・エンジニア同席打合せ</strong><span>技術者と一緒に提案を組み立てられるのがRTSの強み</span></div></li>
+          <li><time>18:30</time><div><strong>退勤</strong><span>数字の締め日以外は19時前に上がる人が多め</span></div></li>
+        </ol>
+      </div>
+
+      <!-- 一緒に働く仲間 -->
+      <div class="job-team">
+        <p class="job-team__title">一緒に働く仲間<span>営業チームと支える人</span></p>
+        <div class="job-team__grid">
+          <a class="job-team__card" href="people.html">
+            <img src="images/個人写真/中島.jpg" alt="中島 嘉寿" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>中島 嘉寿</strong>
+              <span>社長室室長 / CHRO</span>
+              <em>「面接でお会いするのは私です。何でも聞いてください」</em>
+            </div>
+          </a>
+          <a class="job-team__card" href="about.html">
+            <img src="images/個人写真/節賀 由樹.jpg" alt="節賀 由樹" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>節賀 由樹</strong>
+              <span>代表取締役CEO</span>
+              <em>「営業は会社の顔。一緒にお客様の前に立ちます」</em>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 正直な話（Realistic Job Preview） -->
+      <div class="job-rjp">
+        <p class="job-rjp__title">正直な話。<span>いいことだけ書いても、入社後がつらいので</span></p>
+        <ul class="job-rjp__list">
+          <li>数字は毎月ちゃんと見られます。プレッシャーはあります。</li>
+          <li>IT知識のキャッチアップは入社後も継続的に必要です。</li>
+        </ul>
+        <p class="job-rjp__last">ただし1人で数字を背負う営業ではありません。エンジニアが提案に同席する体制なので、「わからないことを聞ける人」が常に隣にいます。</p>
+      </div>
+
+      <div class="job-apply-cta">
+        <div class="job-apply-cta__text">
+          <p class="job-apply-cta__label">APPLY NOW</p>
+          <p class="job-apply-cta__title">この求人にエントリーする</p>
+        </div>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="job-apply-cta__wantedly">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+          Wantedlyで応募
+        </a>
+        <a href="entry-form.html?position=sales" class="job-apply-cta__btn">
+          応募・面談予約へ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    04 — マーケティング担当
+  ======================================================== -->
+  <section class="job-section" id="marketing">
+    <div class="l-inner">
+      <div class="job-section__head">
+        <div class="job-section__num">04</div>
+        <div class="job-section__title-group">
+          <p class="job-section__en">MARKETING</p>
+          <h2 class="job-section__title">マーケティング担当募集</h2>
+        </div>
+        <div class="job-section__salary-badge">
+          <p class="job-section__salary-label">SALARY</p>
+          <p class="job-section__salary-value">年収 350万〜600万円</p>
+          <p class="job-section__salary-note">スキル・実績に応じて決定</p>
+        </div>
+      </div>
+
+      <figure class="job-section__photo">
+        <img src="images/team/team.jpg" alt="" loading="lazy" style="object-position:center 35%">
+        <figcaption>会社の顔をつくる仕事。発信のすべてに関われます。</figcaption>
+      </figure>
+
+      <div class="job-detail">
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <p class="job-detail__label">仕事内容</p>
+          <ul class="job-detail__list">
+            <li>採用・事業PR向けSNS運用（X / Instagram / TikTok / YouTube）</li>
+            <li>コーポレートブログ・オウンドメディア記事企画・執筆</li>
+            <li>Web広告（Google / Meta）の運用・分析・改善</li>
+            <li>ブランドガイドラインの策定・管理</li>
+            <li>採用候補者向けコンテンツ企画・採用マーケティング</li>
+          </ul>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="job-detail__label">必須・歓迎スキル</p>
+          <div>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">必須</p>
+            <ul class="job-detail__list" style="margin-bottom:16px;">
+              <li>マーケティング業務経験2年以上（SNS・広告・コンテンツいずれか）</li>
+              <li>Google Analytics 等解析ツールの利用経験</li>
+            </ul>
+            <p style="font-size:1.2rem;font-weight:700;color:var(--c-text-mid);margin-bottom:8px;">歓迎</p>
+            <ul class="job-detail__list">
+              <li>IT・スタートアップ企業でのマーケ経験</li>
+              <li>Figma・Canva等デザインツール使用経験</li>
+              <li>動画編集・脚本制作経験</li>
+              <li>採用マーケティング・採用広報経験</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p class="job-detail__label">勤務条件</p>
+          <div class="job-detail__value">
+            <strong>年収 350万〜600万円</strong>
+            <p>スキル・実績・面談内容によって決定</p>
+            <p>昇給：年2回 / 賞与：年2回</p>
+            <p>勤務地：東京・築地本社</p>
+            <p>休日：土日祝・年間休日125日</p>
+          </div>
+        </div>
+
+        <div class="job-detail__block">
+          <div class="job-detail__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="job-detail__label">待遇</p>
+          <div class="job-detail__tag-list">
+            <span class="job-detail__tag">広告費裁量あり</span>
+            <span class="job-detail__tag">ツール費用会社負担</span>
+            <span class="job-detail__tag">副業OK</span>
+            <span class="job-detail__tag">セミナー参加費補助</span>
+            <span class="job-detail__tag">健康保険完備</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 働き方の実数（RJP）※残業・有休は実績値に差し替えてください -->
+      <div class="job-reality">
+        <p class="job-reality__title">働き方の実数<span>数字で見る、入社後のリアル</span></p>
+        <ul class="job-reality__list">
+          <li><strong>12.6h</strong><span>月平均残業<em>※直近1年実績</em></span></li>
+          <li><strong>125日</strong><span>年間休日</span></li>
+          <li><strong>88%</strong><span>有休取得率</span></li>
+        </ul>
+      </div>
+
+      <!-- 1日のスケジュール -->
+      <div class="job-day">
+        <p class="job-day__title">1日のスケジュール<span>とある1日の流れ（フレックスの一例）</span></p>
+        <ol class="job-day__timeline">
+          <li><time>10:00</time><div><strong>数値チェック</strong><span>SNS・広告・サイトの前日数値をダッシュボードで確認</span></div></li>
+          <li class="job-day__timeline--photo"><time>11:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">SNSのネタ、ここで拾ってます</span><img src="images/個人写真/向井.jpg" alt="" loading="lazy" style="object-position:center 20%"></div><div><strong>コンテンツ制作</strong><span>SNS投稿・記事・採用コンテンツの企画と制作</span></div></li>
+          <li><time>13:00</time><div><strong>ランチ</strong><span>気分転換に外に出る人も、オフィスでゆっくりする人も</span></div></li>
+          <li class="job-day__timeline--photo"><time>14:00</time><div class="job-day__photo-wrap"><span class="job-day__bubble">社員のリアルな声を届けるよ</span><img src="images/recruit/kato.jpg" alt="" loading="lazy" style="object-position:center 18%"></div><div><strong>撮影・取材・打ち合わせ</strong><span>社員インタビューやオフィス撮影もマーケの仕事</span></div></li>
+          <li><time>16:00</time><div><strong>分析・翌週の企画</strong><span>数字を見て、次の一手を自分で決められます</span></div></li>
+          <li><time>19:00</time><div><strong>退勤</strong><span>制作物の締切前以外は残業少なめ</span></div></li>
+        </ol>
+      </div>
+
+      <!-- 一緒に働く仲間 -->
+      <div class="job-team">
+        <p class="job-team__title">一緒に働く仲間<span>マーケティングの現場</span></p>
+        <div class="job-team__grid">
+          <a class="job-team__card" href="people.html">
+            <img src="images/個人写真/中島.jpg" alt="中島 嘉寿" loading="lazy" style="object-position:center 12%">
+            <div>
+              <strong>中島 嘉寿</strong>
+              <span>社長室室長 / CHRO</span>
+              <em>「採用ブランディングも一緒にやりましょう」</em>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 正直な話（Realistic Job Preview） -->
+      <div class="job-rjp">
+        <p class="job-rjp__title">正直な話。<span>いいことだけ書いても、入社後がつらいので</span></p>
+        <ul class="job-rjp__list">
+          <li>少人数体制です。企画から実行・分析まで、全部自分でやることになります。</li>
+          <li>施策の成果が数字に出るまで時間がかかることもあり、地道な検証の繰り返しです。</li>
+        </ul>
+        <p class="job-rjp__last">だからこそ「自分がやった」と言える範囲が広い。裁量の大きさは社内でも随一のポジションです。</p>
+      </div>
+
+      <div class="job-apply-cta">
+        <div class="job-apply-cta__text">
+          <p class="job-apply-cta__label">APPLY NOW</p>
+          <p class="job-apply-cta__title">この求人にエントリーする</p>
+        </div>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="job-apply-cta__wantedly">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+          Wantedlyで応募
+        </a>
+        <a href="entry-form.html?position=marketing" class="job-apply-cta__btn">
+          応募・面談予約へ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    BENEFITS OVERVIEW
+  ======================================================== -->
+  <section class="benefits-section">
+    <div class="l-inner">
+      <div class="c-section-head">
+        <p class="c-section-head__en">BENEFITS</p>
+        <h2 class="c-section-head__ja">福利厚生</h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h36v32H6z" rx="2"/><path d="M16 4v8M32 4v8M6 18h36"/><path d="M14 28l4 4 10-10"/></svg>
+          </span>
+          <h3 class="benefit-card__title">学習支援制度</h3>
+          <p class="benefit-card__desc">資格取得費用全額補助、技術書購入補助（年10万円まで）、外部カンファレンス参加費支給。</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="24" cy="24" r="18"/><polyline points="24 12 24 24 32 30"/></svg>
+          </span>
+          <h3 class="benefit-card__title">フレックスタイム制</h3>
+          <p class="benefit-card__desc">コアタイム（13:00〜16:00）以外は自由に勤務時間を設定。仕事もプライベートも充実。</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="12" width="36" height="26" rx="2"/><path d="M6 19h36M16 8v8M32 8v8"/><path d="M14 30h6M14 36h10"/></svg>
+          </span>
+          <h3 class="benefit-card__title">副業・複業OK</h3>
+          <p class="benefit-card__desc">本業に支障がなければ副業・複業を推奨。多様な経験が成長につながると考えています。</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z"/><path d="M24 16c-2.2 0-4 1.8-4 4v4h8v-4c0-2.2-1.8-4-4-4z"/><path d="M18 28h12v8H18z"/></svg>
+          </span>
+          <h3 class="benefit-card__title">年間休日125日</h3>
+          <p class="benefit-card__desc">完全週休2日制（土日祝）。有給休暇取得率85%以上。計画的に休めます。</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="8,36 18,22 28,30 40,12"/><line x1="40" y1="12" x2="40" y2="22"/><line x1="30" y1="12" x2="40" y2="12"/></svg>
+          </span>
+          <h3 class="benefit-card__title">急成長のキャリアパス</h3>
+          <p class="benefit-card__desc">実力次第で最短1年でリーダーポジションへ。成果に応じた昇給・昇格で年収を伸ばせます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    選考フロー
+  ======================================================== -->
+  <section class="flow-section" id="flow">
+    <div class="c-section-head">
+      <p class="c-section-head__en">SELECTION FLOW</p>
+      <h2 class="c-section-head__ja">選考フロー</h2>
+    </div>
+    <div class="l-inner">
+      <ol class="flow-list">
+        <li class="flow-item">
+          <div class="flow-item__num">01</div>
+          <p class="flow-item__title">気軽に応募</p>
+          <p class="flow-item__desc">公式LINEかWantedlyから。「迷ってるけど応募してみた」で全然OK。</p>
+        </li>
+        <li class="flow-item">
+          <div class="flow-item__num">02</div>
+          <p class="flow-item__title">書類確認</p>
+          <p class="flow-item__desc">3〜5営業日以内にご連絡します。</p>
+        </li>
+        <li class="flow-item">
+          <div class="flow-item__num">03</div>
+          <p class="flow-item__title">カジュアル面談</p>
+          <p class="flow-item__desc">まずはオンラインでざっくばらんに話しましょう（約60分）。</p>
+        </li>
+        <li class="flow-item">
+          <div class="flow-item__num">04</div>
+          <p class="flow-item__title">最終面接</p>
+          <p class="flow-item__desc">代表・役員と直接お話しします（オンライン or 来社、どちらでも）。</p>
+        </li>
+        <li class="flow-item">
+          <div class="flow-item__num">05</div>
+          <p class="flow-item__title">内定・入社</p>
+          <p class="flow-item__desc">内定後は入社前研修つき。初日から「置いてけぼり」にはしません。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    WANTEDLY
+  ======================================================== -->
+  <section class="wantedly-banner">
+    <div class="l-inner">
+      <div class="wantedly-card">
+        <div>
+          <div class="wantedly-card__logo">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+            <span>Wantedly</span>
+          </div>
+          <h2 class="wantedly-card__title">まずは「話を聞きに行く」から始めよう</h2>
+          <p class="wantedly-card__desc">
+            まだ転職を決めていなくても大丈夫。<br>
+            Wantedlyでは気軽に会社の雰囲気を知るところから始められます。<br>
+            社員と直接話して、Rise Tech Solutionsのカルチャーを体感してください。
+          </p>
+        </div>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="wantedly-card__btn">
+          Wantedlyで見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    FOOTER
+  ======================================================== -->
+  <footer class="l-footer">
+    <div class="l-footer__main">
+      <div class="l-inner">
+        <div class="l-footer__main-inner">
+          <div class="l-footer__logo">
+            <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+            <em>採用サイト</em>
+          </div>
+          <div class="l-footer__info">
+            <p><strong>東京本社</strong><br>〒104-0045 東京都中央区築地2-10-2<br>JP-BASE築地駅前 7階</p>
+            <p><strong>熊本オフィス</strong><br>〒860-0047 熊本県熊本市西区春日1丁目14-1<br>くまもと森都心プラザ2階 XOSS POINT. Room1</p>
+            <p>TEL: <a href="tel:0368042140">03-6804-2140</a></p>
+          </div>
+          <nav class="l-footer__nav">
+            <ul>
+              <li><a href="business.html">OUR BUSINESS</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="people.html">PEOPLE</a></li>
+              <li><a href="culture.html">ENVIRONMENT</a></li><li><a href="workstyle.html">WORKSTYLE</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="recruit.html">RECRUIT</a></li>
+              <li><a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener">コーポレートサイト</a></li>
+            </ul>
+          </nav>
+          <div class="l-footer__sns">
+            <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" aria-label="Wantedly" class="l-footer__sns-item l-footer__sns-item--wantedly">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/rts.kumamoto" target="_blank" rel="noopener" aria-label="Instagram" class="l-footer__sns-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__copy">
+      <p>&copy; 2026 Rise Tech Solutions Co., Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <div class="p-float-cta" id="floatCta" aria-hidden="true">
+    <div class="p-float-cta__inner">
+      <p class="p-float-cta__msg">気になるポジション、見つかった？</p>
+      <a href="entry-form.html" class="p-float-cta__btn">エントリーする</a>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260927x"></script>
+  <script src="pop.js?v=20260927x"></script>
+  <script>
+    'use strict';
+    // Show float CTA after scrolling past hero
+    (function() {
+      const cta = document.getElementById('floatCta');
+      if (!cta) return;
+      const hero = document.querySelector('.recruit-hero');
+      if (!hero) return;
+      new IntersectionObserver(entries => {
+        const gone = !entries[0].isIntersecting;
+        cta.classList.toggle('is-visible', gone);
+        cta.setAttribute('aria-hidden', String(!gone));
+      }, { threshold: 0 }).observe(hero);
+    })();
+
+    // Recruit nav active on scroll
+    (function() {
+      const items = document.querySelectorAll('.recruit-nav__item');
+      const sections = ['beginner','experienced','sales','marketing','flow'].map(id => document.getElementById(id));
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        sections.forEach((sec, i) => {
+          if (!sec) return;
+          const top = sec.getBoundingClientRect().top + scrollY - 200;
+          const bottom = top + sec.offsetHeight;
+          if (scrollY >= top && scrollY < bottom) {
+            items.forEach(el => el.classList.remove('is-active'));
+            if (items[i]) items[i].classList.add('is-active');
+          }
+        });
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

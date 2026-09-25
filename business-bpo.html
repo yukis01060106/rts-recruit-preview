@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPO事業部 | 事業内容 | 採用サイト | 株式会社Rise Tech Solutions</title>
+  <meta name="description" content="Rise Tech Solutionsのバックオフィス業務のBPO事業。事務・経理代行から1on1メンタリングまで、組織運営を支えるBPOサービスです。">
+  <meta property="og:title" content="BPO事業部 | 株式会社Rise Tech Solutions">
+  <meta property="og:description" content="事務・経理の代行と1on1メンタリング。組織の裏側を支えるプロフェッショナル。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://rt-solutions.co.jp/recruit/business/bpo/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css?v=20260927x">
+  <style>
+    .sub-hero { background:linear-gradient(135deg,#0a1525 0%,#1c2c43 60%,#0d2340 100%); padding:calc(var(--header-h) + 80px) 0 80px; position:relative; overflow:hidden; }
+    .sub-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,212,200,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,200,.04) 1px,transparent 1px); background-size:60px 60px; }
+    .sub-hero__blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .sub-hero__blob--1 { width:500px; height:500px; background:radial-gradient(circle,rgba(0,212,200,.2) 0%,transparent 70%); top:-150px; right:-80px; animation:floatShape 14s ease-in-out infinite; }
+    .sub-hero__inner { position:relative; z-index:1; }
+    .sub-hero__breadcrumb { display:flex; gap:8px; align-items:center; font-size:1.2rem; color:rgba(255,255,255,.4); margin-bottom:24px; }
+    .sub-hero__breadcrumb a { color:rgba(255,255,255,.4); transition:color .25s; }
+    .sub-hero__breadcrumb a:hover { color:#00d4c8; }
+    .sub-hero__breadcrumb span { color:rgba(255,255,255,.2); }
+    .sub-hero__en { font-family:var(--font-en); font-size:1rem; font-weight:700; letter-spacing:.3em; color:#00d4c8; margin-bottom:16px; }
+    .sub-hero__title { font-size:clamp(3.6rem,6vw,6.4rem); font-weight:900; background:linear-gradient(135deg,#fff 0%,#00d4c8 50%,#2b5fff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1.15; margin-bottom:20px; }
+    .sub-hero__lead { font-size:1.8rem; color:rgba(255,255,255,.65); max-width:640px; line-height:1.9; }
+
+    /* ===== Business anchor nav ===== */
+    .biz-anchors { background:#fff; border-bottom:1px solid var(--c-border); position:sticky; top:var(--header-h); z-index:100; box-shadow:0 2px 12px rgba(0,0,0,.06); }
+    .biz-anchors__list { display:flex; overflow-x:auto; }
+    .biz-anchors__item a { display:block; padding:18px 24px; font-size:1.3rem; font-weight:700; letter-spacing:.05em; color:var(--c-text-mid); white-space:nowrap; border-bottom:3px solid transparent; transition:color .25s,border-color .25s; }
+    .biz-anchors__item a:hover, .biz-anchors__item.is-active a { color:var(--c-teal-dark); border-color:var(--c-teal); }
+
+    /* ===== Business section ===== */
+    .biz-section { padding:100px 0; scroll-margin-top:calc(var(--header-h) + 60px); }
+    .biz-section:nth-child(even) { background:var(--c-bg); }
+
+    .biz-section__head { display:grid; grid-template-columns:auto 1fr; gap:32px; align-items:center; margin-bottom:64px; padding-bottom:32px; border-bottom:1px solid var(--c-border); }
+    .biz-section__num { font-family:var(--font-en); font-size:10rem; font-weight:800; line-height:1; background:linear-gradient(135deg,#00d4c8 0%,#2b5fff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; opacity:.15; }
+    .biz-section__en { font-family:var(--font-en); font-size:1.1rem; font-weight:700; letter-spacing:.2em; color:var(--c-teal-dark); margin-bottom:8px; }
+    .biz-section__title { font-size:clamp(2.8rem,4vw,4.4rem); font-weight:700; color:var(--c-dark); letter-spacing:.02em; }
+    .biz-section__lead { font-size:1.8rem; color:var(--c-text-mid); line-height:2; margin-bottom:60px; max-width:800px; }
+    .biz-section__lead strong { color:var(--c-dark); }
+
+    /* Detail grid */
+    .biz-detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:60px; }
+    .biz-detail-card { background:#fff; border-radius:12px; padding:36px; border:1px solid var(--c-border); box-shadow:0 2px 12px rgba(0,0,0,.05); transition:transform .35s var(--spring),box-shadow .35s; }
+    .biz-section:nth-child(even) .biz-detail-card { background:#fff; }
+    .biz-detail-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(20,210,192,.1); }
+    .biz-detail-card--full { grid-column:1/-1; }
+    .biz-detail-card--featured { grid-column:1/-1; border:2px solid transparent; background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,#00d4c8,#2b5fff) border-box; position:relative; }
+    .biz-detail-card__badge { position:absolute; top:16px; right:16px; background:linear-gradient(135deg,#00d4c8,#2b5fff); color:#fff; font-size:1.1rem; font-weight:700; padding:4px 14px; border-radius:100px; letter-spacing:.05em; }
+    .biz-detail-card__icon { width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,rgba(0,212,200,.12) 0%,rgba(43,95,255,.12) 100%); display:flex; align-items:center; justify-content:center; color:var(--c-teal-dark); margin-bottom:20px; }
+    .biz-detail-card__icon svg { width:24px; height:24px; }
+    .biz-detail-card__title { font-size:1.8rem; font-weight:700; color:var(--c-dark); margin-bottom:12px; }
+    .biz-detail-card__text { font-size:1.5rem; color:var(--c-text-mid); line-height:1.9; }
+    .biz-detail-card__list { display:flex; flex-direction:column; gap:8px; margin-top:16px; }
+    .biz-detail-card__list li { display:flex; align-items:flex-start; gap:10px; font-size:1.4rem; color:var(--c-text); }
+    .biz-detail-card__list li::before { content:''; width:6px; height:6px; border-radius:50%; background:linear-gradient(135deg,#00d4c8,#2b5fff); flex-shrink:0; margin-top:8px; }
+
+    /* Tech stack tags */
+    .biz-tech { margin-top:16px; }
+    .biz-tech__label { font-size:1.2rem; font-weight:700; color:var(--c-text-mid); letter-spacing:.05em; margin-bottom:10px; }
+    .biz-tech__tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .biz-tech__tag { font-family:var(--font-en); font-size:1.2rem; font-weight:600; padding:4px 14px; border-radius:4px; background:var(--c-dark); color:rgba(255,255,255,.8); letter-spacing:.05em; }
+
+    /* ===== En Root SaaS Showcase ===== */
+    .enroot-showcase {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #0a1525 0%, #1c2c43 60%, #0d2340 100%);
+      border-radius: 20px;
+      padding: 56px 56px 56px 56px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .enroot-showcase::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,200,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,200,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .enroot-showcase__badge {
+      position: absolute; top: 24px; right: 24px;
+      background: linear-gradient(135deg, #00d4c8, #2b5fff);
+      color: #fff; font-size: 1.1rem; font-weight: 700;
+      padding: 5px 16px; border-radius: 100px; letter-spacing: .05em;
+    }
+    .enroot-showcase__top {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+    .enroot-showcase__label {
+      font-family: var(--font-en);
+      font-size: 1rem; font-weight: 700;
+      letter-spacing: .35em; color: #00d4c8;
+      margin-bottom: 16px;
+    }
+    .enroot-showcase__title {
+      font-size: clamp(2rem, 2.8vw, 3rem);
+      font-weight: 900; color: #fff;
+      line-height: 1.35; letter-spacing: .02em;
+      margin-bottom: 24px;
+    }
+    .enroot-showcase__desc {
+      font-size: 1.4rem; color: rgba(255,255,255,.65);
+      line-height: 2; margin-bottom: 28px;
+    }
+    .enroot-showcase__features {
+      list-style: none; display: flex; flex-direction: column; gap: 10px;
+    }
+    .enroot-showcase__features li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.4rem; color: rgba(255,255,255,.85);
+    }
+    .enroot-showcase__features li svg {
+      width: 18px; height: 18px; color: #00d4c8; flex-shrink: 0;
+    }
+
+    /* Browser mockup */
+    .enroot-showcase__screen { position: relative; }
+    .enroot-browser {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08);
+      background: #1a2b3e;
+    }
+    .enroot-browser__bar {
+      background: #243447;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .enroot-browser__dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,.2);
+    }
+    .enroot-browser__dot:nth-child(1) { background: #ff5f56; }
+    .enroot-browser__dot:nth-child(2) { background: #ffbd2e; }
+    .enroot-browser__dot:nth-child(3) { background: #27c93f; }
+    .enroot-browser__url {
+      margin-left: 12px;
+      flex: 1;
+      background: rgba(0,0,0,.25);
+      border-radius: 4px;
+      padding: 5px 14px;
+      font-family: var(--font-en);
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.45);
+      max-width: 200px;
+    }
+    .enroot-browser__body { line-height: 0; }
+    .enroot-browser__img {
+      width: 100%; height: 280px; object-fit: cover;
+      object-position: top left;
+      display: block;
+      transition: transform .6s var(--ease);
+    }
+    .enroot-browser:hover .enroot-browser__img { transform: scale(1.03); }
+
+    /* Floating UI badges */
+    .enroot-float {
+      position: absolute;
+      background: rgba(255,255,255,.96);
+      border-radius: 12px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.3);
+      backdrop-filter: blur(4px);
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    .enroot-float--top { top: -16px; right: -16px; }
+    .enroot-float--bottom { bottom: -16px; left: -16px; animation-delay: 1.5s; }
+    .enroot-float__icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, rgba(0,212,200,.15), rgba(43,95,255,.15));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--c-teal-dark);
+    }
+    .enroot-float__icon svg { width: 18px; height: 18px; }
+    .enroot-float__icon--green { background: rgba(39,201,63,.15); color: #27c93f; }
+    .enroot-float__label { font-size: 1rem; color: var(--c-text-mid); margin-bottom: 2px; }
+    .enroot-float__value { font-size: 1.3rem; font-weight: 700; color: var(--c-dark); }
+    .enroot-float__value span { color: var(--c-teal-dark); }
+    .enroot-float__value strong { color: var(--c-teal-dark); }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @media (max-width: 900px) {
+      .enroot-showcase { padding: 40px 28px; }
+      .enroot-showcase__top { grid-template-columns: 1fr; gap: 36px; }
+      .enroot-float--top { top: -10px; right: 0; }
+      .enroot-float--bottom { bottom: -10px; left: 0; }
+    }
+
+    /* Case study */
+    .biz-cases { margin-top:48px; }
+    .biz-cases__title { font-size:1.2rem; font-weight:700; letter-spacing:.15em; color:var(--c-teal-dark); margin-bottom:20px; }
+    .biz-cases__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .biz-case { background:linear-gradient(135deg,rgba(0,212,200,.06) 0%,rgba(43,95,255,.06) 100%); border:1px solid rgba(0,212,200,.2); border-radius:8px; padding:20px; }
+    .biz-case__industry { font-size:1.1rem; font-weight:700; color:var(--c-teal-dark); margin-bottom:8px; }
+    .biz-case__title { font-size:1.4rem; font-weight:700; color:var(--c-dark); margin-bottom:8px; }
+    .biz-case__result { font-size:1.3rem; color:var(--c-text-mid); }
+    .biz-case__result strong { color:var(--c-teal-dark); }
+
+    @media(max-width:1024px) { .biz-detail-grid { grid-template-columns:1fr; } .biz-cases__grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:767px) { .biz-section__head { grid-template-columns:1fr; } .biz-section__num { font-size:6rem; } .biz-cases__grid { grid-template-columns:1fr; } }
+  </style>
+  <link rel="stylesheet" href="pop.css?v=20260927x">
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <p class="l-header__logo"><a href="index.html"><span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span><em>採用サイト</em></a></p>
+      <nav class="l-gnav" id="gnav">
+        <ul class="l-gnav__list">
+          <li class="l-gnav__has-dropdown is-active">
+            <a href="business.html"><span class="en">WORK</span><span class="ja">仕事を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="business-solution.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">ソリューション事業部</span><span class="l-gnav__dropdown-desc">受託開発・SES。要件定義から保守まで</span></a>
+              <a href="business-product.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">プロダクト事業部</span><span class="l-gnav__dropdown-desc">自社SaaS「En Root」を企画から開発・運営</span></a>
+              <a href="business-consulting.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">コンサルティング事業部</span><span class="l-gnav__dropdown-desc">CSO伴走・経営×ITコンサル</span></a>
+              <a href="business-bpo.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">BPO事業部</span><span class="l-gnav__dropdown-desc">事務・経理代行と1on1メンタリング</span></a>
+            </div>
+          </li>
+          <li><a href="about.html"><span class="en">ABOUT</span><span class="ja">会社を知る</span></a></li>
+          <li><a href="people.html"><span class="en">PEOPLE</span><span class="ja">働く仲間を知る</span></a></li>
+          <li><a href="culture.html"><span class="en">CULTURE</span><span class="ja">環境を知る</span></a></li>
+          <li class="l-gnav__has-dropdown">
+            <a href="workstyle.html"><span class="en">WORKSTYLE</span><span class="ja">働き方を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="workstyle.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">数字で見る働き方</span><span class="l-gnav__dropdown-desc">残業・休日の実績を正直に公開</span></a>
+              <a href="recruit.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">1日のスケジュール</span><span class="l-gnav__dropdown-desc">職種ごとのリアルな1日の流れ</span></a>
+              <a href="culture.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">福利厚生・研修制度</span><span class="l-gnav__dropdown-desc">使われている制度だけを紹介</span></a>
+              <a href="culture.html#env-career" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">キャリアパス</span><span class="l-gnav__dropdown-desc">未経験から経営層まで、実例で見る成長の道筋</span></a>
+            </div>
+          </li>
+          <li><a href="news.html"><span class="en">NEWS</span><span class="ja">お知らせ</span></a></li>
+          <li><a href="recruit.html"><span class="en">RECRUIT</span><span class="ja">採用情報</span></a></li>
+        </ul>
+        <div class="l-gnav__btns">
+          <a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener" class="btn-corp">コーポレートサイト</a>
+          <a href="entry-form.html" class="btn-entry js-magnetic">ENTRY</a>
+        </div>
+      </nav>
+      <button class="l-header__hamburger" id="hamburger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="cursor" id="cursor"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+
+  <section class="sub-hero">
+    <div class="sub-hero__blob sub-hero__blob--1"></div>
+    <div class="l-inner sub-hero__inner">
+      <div class="sub-hero__breadcrumb">
+        <a href="index.html">TOP</a><span>›</span><a href="business.html">事業内容</a><span>›</span><span>BPO事業部</span>
+      </div>
+      <p class="sub-hero__en">BPO DIVISION</p>
+      <h1 class="sub-hero__title">BPO事業部</h1>
+      <p class="sub-hero__lead">事務・経理の代行と1on1メンタリング。組織の裏側を支えるプロフェッショナル。</p>
+    </div>
+  </section>
+
+  <section class="biz-section" id="bpo">
+    <div class="l-inner">
+      <div class="biz-section__head">
+        <div class="biz-section__num">04</div>
+        <div>
+          <p class="biz-section__en">BPO DIVISION</p>
+          <h2 class="biz-section__title">BPO事業部</h2>
+        </div>
+      </div>
+      <p class="biz-section__lead">
+        ノンコア業務をまるごと引き受け、<strong>本来の事業に集中できる環境をつくります。</strong><br>
+        事務・経理から1on1メンタリングまで、組織運営を支えるBPOサービスです。
+      </p>
+
+      <div class="biz-detail-grid">
+        <div class="biz-detail-card">
+          <div class="biz-detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="biz-detail-card__title">事務・経理BPO</h3>
+          <p class="biz-detail-card__text">請求書処理・データ入力・経理記帳・レポーティングなど、バックオフィス業務をまるごとアウトソーシング。コア業務への集中をサポートします。</p>
+          <ul class="biz-detail-card__list">
+            <li>請求書・領収書処理・仕訳入力</li>
+            <li>月次経理レポート・決算サポート</li>
+            <li>データ入力・ドキュメント管理</li>
+            <li>総務・庶務業務の代行</li>
+            <li>給与計算・勤怠集計サポート</li>
+          </ul>
+        </div>
+
+        <div class="biz-detail-card">
+          <div class="biz-detail-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3 class="biz-detail-card__title">1on1メンタリング</h3>
+          <p class="biz-detail-card__text">マネージャー・経営者向けの1on1メンタリングサービス。人材育成・組織活性化・メンバーの成長を専門メンターが伴走して支えます。</p>
+          <ul class="biz-detail-card__list">
+            <li>管理職・リーダー向けコーチング</li>
+            <li>若手・中堅社員のキャリア面談代行</li>
+            <li>組織の心理的安全性向上支援</li>
+            <li>定期1on1の設計・ファシリテーション</li>
+            <li>メンタリング効果の可視化・レポート</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="x-sec x-entry">
+    <div class="x-wrap">
+      <h2 class="x-entry__big">Let's<br><span>Rise</span> together.</h2>
+      <p class="x-entry__lead">このビジネスを、一緒に育てませんか？<br>受託・コンサル・自社プロダクト——すべてが成長の場です。</p>
+      <div class="x-entry__cta">
+        <a href="recruit.html" class="x-btn js-magnetic">採用情報を見る<i>→</i></a>
+        <a href="entry-form.html" class="x-btn x-btn--lime">エントリーする<i>→</i></a>
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" class="x-btn x-btn--ghost">Wantedlyで話を聞く<i>↗</i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="l-footer">
+    <div class="l-footer__main"><div class="l-inner"><div class="l-footer__main-inner">
+      <div class="l-footer__logo"><span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span><em>採用サイト</em></div>
+      <div class="l-footer__info"><p><strong>東京本社</strong><br>〒104-0045 東京都中央区築地2-10-2<br>JP-BASE築地駅前 7階</p><p><strong>熊本オフィス</strong><br>〒860-0047 熊本県熊本市西区春日1丁目14-1<br>くまもと森都心プラザ2階 XOSS POINT. Room1</p><p>TEL: <a href="tel:0368042140">03-6804-2140</a></p></div>
+      <nav class="l-footer__nav"><ul>
+        <li><a href="business.html">OUR BUSINESS</a></li><li><a href="about.html">ABOUT US</a></li>
+        <li><a href="people.html">PEOPLE</a></li><li><a href="culture.html">ENVIRONMENT</a></li><li><a href="workstyle.html">WORKSTYLE</a></li>
+        <li><a href="news.html">NEWS</a></li><li><a href="recruit.html">RECRUIT</a></li>
+        <li><a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener">コーポレートサイト</a></li>
+      </ul></nav>
+      <div class="l-footer__sns">
+        <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" aria-label="Wantedly" class="l-footer__sns-item l-footer__sns-item--wantedly"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg></a>
+      </div>
+    </div></div></div>
+    <div class="l-footer__copy"><p>&copy; 2026 Rise Tech Solutions Co., Ltd. All Rights Reserved.</p></div>
+  </footer>
+
+  <script src="script.js?v=20260927x"></script>
+  <script src="pop.js?v=20260927x"></script>
+</body>
+</html>

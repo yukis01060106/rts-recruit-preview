@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新卒採用 | 採用サイト | 株式会社Rise Tech Solutions</title>
+  <meta name="description" content="株式会社Rise Tech Solutionsの新卒採用ページ。現在準備中です。気になる方はお気軽にお問い合わせください。">
+  <meta property="og:title" content="新卒採用 | 株式会社Rise Tech Solutions">
+  <meta property="og:description" content="新卒採用ページは現在準備中です。気になる方はお気軽にお問い合わせください。">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://rt-solutions.co.jp/recruit/shinsotsu/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css?v=20260927x">
+  <style>
+    .sub-hero { background:linear-gradient(135deg,#0a1525 0%,#1c2c43 60%,#0d2340 100%); padding:calc(var(--header-h) + 80px) 0 80px; position:relative; overflow:hidden; }
+    .sub-hero::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,212,200,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,200,.04) 1px,transparent 1px); background-size:60px 60px; }
+    .sub-hero__blob { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; }
+    .sub-hero__blob--1 { width:500px; height:500px; background:radial-gradient(circle,rgba(0,212,200,.2) 0%,transparent 70%); top:-150px; right:-80px; animation:floatShape 14s ease-in-out infinite; }
+    .sub-hero__inner { position:relative; z-index:1; }
+    .sub-hero__breadcrumb { display:flex; gap:8px; align-items:center; font-size:1.2rem; color:rgba(255,255,255,.4); margin-bottom:24px; }
+    .sub-hero__breadcrumb a { color:rgba(255,255,255,.4); transition:color .25s; }
+    .sub-hero__breadcrumb a:hover { color:#00d4c8; }
+    .sub-hero__breadcrumb span { color:rgba(255,255,255,.2); }
+    .sub-hero__en { font-family:var(--font-en); font-size:1rem; font-weight:700; letter-spacing:.3em; color:#00d4c8; margin-bottom:16px; }
+    .sub-hero__title { font-size:clamp(3.6rem,6vw,6.4rem); font-weight:900; background:linear-gradient(135deg,#fff 0%,#00d4c8 50%,#2b5fff 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1.15; margin-bottom:20px; }
+    .sub-hero__lead { font-size:1.8rem; color:rgba(255,255,255,.65); max-width:640px; line-height:1.9; }
+
+    .ns-wrap { padding: 100px 0; background: #fff; }
+    .ns-box { max-width: 720px; margin: 0 auto; text-align: center; }
+    .ns-box__icon { width: 72px; height: 72px; margin: 0 auto 28px; border-radius: 50%; background: var(--c-teal-bg); display: flex; align-items: center; justify-content: center; color: var(--c-teal-dark); }
+    .ns-box__icon svg { width: 32px; height: 32px; }
+    .ns-box__title { font-size: 2.4rem; font-weight: 700; color: var(--c-dark); margin-bottom: 20px; }
+    .ns-box__text { font-size: 1.5rem; color: var(--c-text-mid); line-height: 2; margin-bottom: 40px; }
+    .ns-box__ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+    .ns-box__btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; border-radius: 100px; font-size: 1.4rem; font-weight: 700; white-space: nowrap; transition: transform .3s var(--spring), box-shadow .3s; }
+    .ns-box__btn--main { background: linear-gradient(135deg, var(--c-teal), var(--c-accent)); color: #fff; box-shadow: 0 6px 20px rgba(20,210,192,.28); }
+    .ns-box__btn--main:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(20,210,192,.38); }
+    .ns-box__btn--sub { border: 1.5px solid var(--c-border); color: var(--c-text-mid); }
+    .ns-box__btn--sub:hover { border-color: var(--c-teal); color: var(--c-teal-dark); }
+
+    .ns-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; border-top: 1px solid var(--c-border); padding-top: 40px; }
+    .ns-links a { font-size: 1.3rem; color: var(--c-text-mid); padding: 8px 16px; border-radius: 100px; transition: background .2s, color .2s; }
+    .ns-links a:hover { background: var(--c-teal-bg); color: var(--c-teal-dark); }
+  </style>
+  <link rel="stylesheet" href="pop.css?v=20260927x">
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" aria-label="ページトップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <header class="l-header" id="header">
+    <div class="l-header__inner">
+      <p class="l-header__logo">
+        <a href="index.html">
+          <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+          <em>採用サイト</em>
+        </a>
+      </p>
+      <nav class="l-gnav" id="gnav">
+        <ul class="l-gnav__list">
+          <li class="l-gnav__has-dropdown">
+            <a href="business.html"><span class="en">WORK</span><span class="ja">仕事を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="business-solution.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">ソリューション事業部</span><span class="l-gnav__dropdown-desc">受託開発・SES。要件定義から保守まで</span></a>
+              <a href="business-product.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">プロダクト事業部</span><span class="l-gnav__dropdown-desc">自社SaaS「En Root」を企画から開発・運営</span></a>
+              <a href="business-consulting.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">コンサルティング事業部</span><span class="l-gnav__dropdown-desc">CSO伴走・経営×ITコンサル</span></a>
+              <a href="business-bpo.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">BPO事業部</span><span class="l-gnav__dropdown-desc">事務・経理代行と1on1メンタリング</span></a>
+            </div>
+          </li>
+          <li><a href="about.html"><span class="en">ABOUT</span><span class="ja">会社を知る</span></a></li>
+          <li><a href="people.html"><span class="en">PEOPLE</span><span class="ja">働く仲間を知る</span></a></li>
+          <li><a href="culture.html"><span class="en">CULTURE</span><span class="ja">環境を知る</span></a></li>
+          <li class="l-gnav__has-dropdown">
+            <a href="workstyle.html"><span class="en">WORKSTYLE</span><span class="ja">働き方を知る</span></a>
+            <div class="l-gnav__dropdown">
+              <a href="workstyle.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">数字で見る働き方</span><span class="l-gnav__dropdown-desc">残業・休日の実績を正直に公開</span></a>
+              <a href="recruit.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">1日のスケジュール</span><span class="l-gnav__dropdown-desc">職種ごとのリアルな1日の流れ</span></a>
+              <a href="culture.html" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">福利厚生・研修制度</span><span class="l-gnav__dropdown-desc">使われている制度だけを紹介</span></a>
+              <a href="culture.html#env-career" class="l-gnav__dropdown-item"><span class="l-gnav__dropdown-title">キャリアパス</span><span class="l-gnav__dropdown-desc">未経験から経営層まで、実例で見る成長の道筋</span></a>
+            </div>
+          </li>
+          <li><a href="news.html"><span class="en">NEWS</span><span class="ja">お知らせ</span></a></li>
+          <li><a href="recruit.html"><span class="en">RECRUIT</span><span class="ja">採用情報</span></a></li>
+        </ul>
+        <div class="l-gnav__btns">
+          <a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener" class="btn-corp">コーポレートサイト</a>
+          <a href="entry-form.html" class="btn-entry js-magnetic">ENTRY</a>
+        </div>
+      </nav>
+      <button class="l-header__hamburger" id="hamburger" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="cursor" id="cursor"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+
+  <section class="sub-hero">
+    <div class="sub-hero__blob sub-hero__blob--1"></div>
+    <div class="l-inner sub-hero__inner">
+      <div class="sub-hero__breadcrumb">
+        <a href="index.html">TOP</a><span>›</span><span>新卒採用</span>
+      </div>
+      <p class="sub-hero__en">NEW GRADUATE</p>
+      <h1 class="sub-hero__title">新卒採用</h1>
+      <p class="sub-hero__lead">2026年度 新卒・第二新卒エンジニア採用。<br>社会の「困った」を、ITとAIで解く仕事を、1年目から。</p>
+    </div>
+  </section>
+
+  <section class="x-sec">
+    <div class="x-wrap">
+      <div class="x-what__grid">
+        <div class="x-in">
+          <p class="x-head__label">MESSAGE FOR STUDENTS</p>
+          <h2 class="x-what__title">社会の「困った」を、<br>ITとAIで<br><em>“解く”</em>側へ。</h2>
+          <p class="x-what__lead">「どこに相談すればいいかわからない」「作ってもらったけど、結局使われていない」——。<br>地方の現場には、テクノロジーで解けるはずの課題が、まだたくさん残っています。<br><strong>RTSは、その課題の隣に座って、解決するまで一緒に走る会社です。</strong><br>あなたの1年目を、誰かの毎日を少しだけ良くする仕事から、はじめませんか。</p>
+        </div>
+        <div class="x-in" style="position:relative">
+          <div class="x-photo x-photo--arch x-photo--teal" style="aspect-ratio:4/5;max-width:440px;margin-left:auto"><img src="images/solution/iwamoto-kato-review.jpg" alt="先輩とコードレビューをする様子" loading="lazy" style="object-position:center 35%"></div>
+          <span class="x-sticker" style="bottom:28px;left:0;transform:rotate(-5deg)">1年目から、本物の現場へ</span>
+        </div>
+      </div>
+
+      <p class="x-what__sub x-in">たとえば、こんな仕事をしています。</p>
+      <ul class="x-what__list">
+        <li class="x-in"><a href="business-solution.html"><span class="x-what__verb">社会インフラ</span><strong>水道局のWebシステム開発</strong><small>検針員の方がiPadで使うシステムを、Next.jsで開発</small></a></li>
+        <li class="x-in"><a href="business-solution.html"><span class="x-what__verb">医療</span><strong>医療業務管理システム</strong><small>業務時間を月100時間以上削減</small></a></li>
+        <li class="x-in"><a href="https://www.wantedly.com/companies/company_5847202/post_articles/1056623" target="_blank" rel="noopener"><span class="x-what__verb">地域 × AI</span><strong>熊本・甲佐町でAI講座</strong><small>町の人たちが、地域課題を解くアプリをAIで作る全4回</small></a></li>
+        <li class="x-in"><a href="business-product.html"><span class="x-what__verb">自社サービス</span><strong>社内DXシステム「En Root」</strong><small>自分たちのサービスを、自分たちの手で育てる</small></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="x-sec x-sec--white">
+    <div class="x-wrap">
+      <div class="x-head x-in">
+        <p class="x-head__label">OUR VISION</p>
+        <h2 class="x-head__en">Our Vision</h2>
+        <p class="x-head__ja">私たちが目指していること</p>
+        <p class="x-head__hand">その未来を、一緒につくる仲間を探しています。</p>
+      </div>
+      <div class="x-mv__grid">
+        <div class="x-mv__card x-in">
+          <p class="x-mv__card-en">Mission</p>
+          <p class="x-mv__card-text"><span>地方が抱えるさまざまな社会課題に、</span><br><span>高い専門性と情報戦略をもって</span><br><span>挑み続ける。</span></p>
+        </div>
+        <div class="x-mv__card x-mv__card--ink x-in">
+          <p class="x-mv__card-en">Vision</p>
+          <p class="x-mv__card-text"><span>2032年、</span><br><span>地方の社会課題解決で</span><br><span><b>九州No.1</b>へ。</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="x-sec x-sec--ink">
+    <div class="x-wrap">
+      <div class="x-head x-in">
+        <p class="x-head__label" style="color:var(--lime)">HOW WE GROW YOU</p>
+        <h2 class="x-head__en">Growth</h2>
+        <p class="x-head__ja">ビジョンを実現するために、育てる仕組みを揃えています</p>
+        <p class="x-head__hand">技術は、入ってから身につければいい。</p>
+      </div>
+      <ul class="x-why__list" style="margin-top:72px">
+        <li class="x-why__item x-in">
+          <span class="x-why__num">01</span>
+          <h3 class="x-why__title">初日から、<br>本物のコードに触れる。</h3>
+          <p class="x-why__body">座学中心ではなく、「実際に動くサービスを作る」ことを軸にした実戦型カリキュラム。入社初日から実際のソースコードに触れ、チーム開発シミュレーションで即戦力のスキルを身につけます。</p>
+          <p class="x-why__tag">#実戦型カリキュラム #チーム開発</p>
+        </li>
+        <li class="x-why__item x-in">
+          <span class="x-why__num">02</span>
+          <h3 class="x-why__title">ひとりに、<br>しない。</h3>
+          <p class="x-why__body">メンターエンジニアが週3回以上コードレビュー。独自の学習支援システム「スキルの芽」で、学習記録や講師への質問もいつでも。業務外の自主学習を支援する「ラーニング手当」もあります。</p>
+          <p class="x-why__tag">#メンター #スキルの芽 #ラーニング手当</p>
+        </li>
+        <li class="x-why__item x-in">
+          <span class="x-why__num">03</span>
+          <h3 class="x-why__title">3ヶ月で、<br>現場のプロジェクトへ。</h3>
+          <p class="x-why__body">プログラミング経験は問いません。前年度に入社した未経験者の91%が、3ヶ月以内にプロジェクトへ参画しました。AIを使った最新の開発手法も、OJTで学べます。</p>
+          <p class="x-why__tag">#91%が3ヶ月以内に参画 #AI×OJT</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="x-sec">
+    <div class="x-wrap">
+      <div class="x-head x-in">
+        <p class="x-head__label">IN TRAINING</p>
+        <h2 class="x-head__en">Training</h2>
+        <p class="x-head__ja">研修中の様子</p>
+        <p class="x-head__hand">わからないことは、すぐ聞ける。</p>
+      </div>
+      <div class="x-training-photos__grid x-in">
+        <div class="x-photo x-photo--teal"><img src="images/solution/training-meeting.jpg" alt="研修中のミーティング" loading="lazy"></div>
+        <div class="x-photo x-photo--coral"><img src="images/solution/iwamoto-kato-review.jpg" alt="コードレビューの様子" loading="lazy" style="object-position:center 35%"></div>
+        <div class="x-photo x-photo--lime"><img src="images/team/member-09.jpg" alt="ペアで画面を見ながら学ぶメンバー" loading="lazy"></div>
+      </div>
+
+      <a class="x-career-link x-in" href="recruit.html#career" style="margin-top:56px">
+        <span class="x-career-link__tag">CAREER</span>
+        <span class="x-career-link__text"><strong>入社後のキャリア例と年収を見る</strong>テスターからスタートして、5年目にVPoE補佐になった先輩の例も</span>
+        <span class="x-career-link__arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="x-sec x-sec--mint">
+    <div class="x-wrap">
+      <div class="x-head x-in">
+        <p class="x-head__label">FLOW</p>
+        <h2 class="x-head__en">How to Join</h2>
+        <p class="x-head__ja">応募から入社まで</p>
+        <p class="x-head__hand">まずは話を聞くだけでも、OK。</p>
+      </div>
+      <ol class="x-flow">
+        <li class="x-flow__step x-in"><span class="x-flow__num">01</span><p class="x-flow__ttl">気軽に応募</p><p class="x-flow__txt">公式LINEかWantedlyから、気軽に声をかけてください。</p></li>
+        <li class="x-flow__step x-in"><span class="x-flow__num">02</span><p class="x-flow__ttl">書類確認</p><p class="x-flow__txt">3〜5営業日以内にご連絡します。</p></li>
+        <li class="x-flow__step x-flow__step--hl x-in"><span class="x-flow__num">03</span><p class="x-flow__ttl">カジュアル面談</p><p class="x-flow__txt">オンラインで、ざっくばらんに約60分。担当は人事の向井です。</p></li>
+        <li class="x-flow__step x-in"><span class="x-flow__num">04</span><p class="x-flow__ttl">最終面接</p><p class="x-flow__txt">代表・役員と直接お話しします。オンラインでも来社でも。</p></li>
+        <li class="x-flow__step x-in"><span class="x-flow__num">05</span><p class="x-flow__ttl">内定・入社</p><p class="x-flow__txt">入社前研修つき。初日から「置いてけぼり」にはしません。</p></li>
+      </ol>
+      <p class="x-lead x-in" style="margin:40px auto 0;text-align:center">少人数の会社のため、年度によって募集の状況が変わります。<br><strong>最新の募集状況は、公式LINEで気軽に聞いてください。</strong>給与などの条件は<a href="recruit.html#beginner" style="text-decoration:underline;font-weight:700">採用情報ページ</a>にまとめています。</p>
+    </div>
+  </section>
+
+  <section class="x-sec x-entry">
+    <div class="x-wrap">
+      <h2 class="x-entry__big">Let's<br><span>Rise</span> together.</h2>
+      <p class="x-entry__lead">社会の「困った」を解く側へ。1年目から、一緒に。まずは話を聞きにきてください。</p>
+      <div class="x-entry__cta">
+        <a href="https://lin.ee/o2bAwTt" target="_blank" rel="noopener" class="x-btn x-mukai__line">公式LINEでカジュアル面談を予約<i>↗</i></a>
+        <a href="entry-form.html" class="x-btn x-btn--lime">エントリーする<i>→</i></a>
+        <a href="recruit.html" class="x-btn x-btn--ghost">中途採用の情報を見る<i>→</i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+    FOOTER
+  ======================================================== -->
+  <footer class="l-footer">
+    <div class="l-footer__main">
+      <div class="l-inner">
+        <div class="l-footer__main-inner">
+          <div class="l-footer__logo">
+            <span class="logo-rise">Rise</span><span class="logo-tech">Tech</span><span class="logo-solutions">Solutions</span>
+            <em>採用サイト</em>
+          </div>
+          <div class="l-footer__info">
+            <p><strong>東京本社</strong><br>〒104-0045 東京都中央区築地2-10-2<br>JP-BASE築地駅前 7階</p>
+            <p><strong>熊本オフィス</strong><br>〒860-0047 熊本県熊本市西区春日1丁目14-1<br>くまもと森都心プラザ2階 XOSS POINT. Room1</p>
+            <p>TEL: <a href="tel:0368042140">03-6804-2140</a></p>
+          </div>
+          <nav class="l-footer__nav">
+            <ul>
+              <li><a href="business.html">OUR BUSINESS</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="people.html">PEOPLE</a></li>
+              <li><a href="culture.html">ENVIRONMENT</a></li>
+              <li><a href="workstyle.html">WORKSTYLE</a></li>
+              <li><a href="news.html">NEWS</a></li>
+              <li><a href="recruit.html">RECRUIT</a></li>
+              <li><a href="https://rt-solutions.co.jp/" target="_blank" rel="noopener">コーポレートサイト</a></li>
+            </ul>
+          </nav>
+          <div class="l-footer__sns">
+            <a href="https://www.wantedly.com/companies/rt-solutions" target="_blank" rel="noopener" aria-label="Wantedly" class="l-footer__sns-item l-footer__sns-item--wantedly">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.042 3l-3.36 9.898L9.32 3H5.618l5.282 14.407L8.42 23.5l.022.013L16.5 3H16.042zm2.34 0l-5.28 14.407 1.476 2.999L24 3h-5.618z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/rts.kumamoto" target="_blank" rel="noopener" aria-label="Instagram" class="l-footer__sns-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@risetechsolutions" target="_blank" rel="noopener" aria-label="TikTok" class="l-footer__sns-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__copy">
+      <p>&copy; 2026 Rise Tech Solutions Co., Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260927x"></script>
+  <script src="pop.js?v=20260927x"></script>
+</body>
+</html>
