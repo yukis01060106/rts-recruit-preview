@@ -20,6 +20,7 @@
 
   /* ---------- 1. ページ切り替えの幕 ---------- */
   const curtain = document.querySelector('.x-curtain');
+  // 初回オープニングのスキップは、描画前のインラインスクリプト（layout.tsx）が担当
   if (curtain) {
     const isInternal = (a) => {
       if (!a || a.target === '_blank' || a.hasAttribute('download')) return false;
