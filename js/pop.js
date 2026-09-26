@@ -64,14 +64,46 @@
   const a = document.createElement('a');
   a.className = 'x-line-fab' + (isLine ? '' : ' x-line-fab--fallback');
   a.href = url;
+  a.setAttribute('aria-label', isLine ? '公式LINEでカジュアル面談を予約する（新しいタブで開きます）' : 'まずは話を聞いてみる');
   if (isLine) { a.target = '_blank'; a.rel = 'noopener'; }
   a.innerHTML = `
     <span class="x-line-fab__icon" aria-hidden="true">${isLine ? '' : '→'}<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.64 2 10.1c0 4 3.55 7.35 8.35 7.99.33.07.77.22.88.5.1.25.07.65.03.9l-.14.85c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.8C21.3 13.5 22 11.9 22 10.1 22 5.64 17.52 2 12 2z"/></svg></span>
-    <span class="x-line-fab__text"><small>カジュアル面談の日程調整</small>${isLine ? '公式LINEで予約する' : 'まずは話を聞いてみる'}</span>`;
+    <span class="x-line-fab__text"><small>カジュアル面談の日程調整</small><b class="is-pc">${isLine ? '公式LINEで予約する' : 'まずは話を聞いてみる'}</b><b class="is-sp">${isLine ? 'LINEで面談予約' : '話を聞いてみる'}</b></span>`;
   document.body.appendChild(a);
 
-  // ページを開いた直後から表示し、スクロールしても画面の左下についてくる
-  setTimeout(() => a.classList.add('is-visible'), 600);
+  // 表示のタイミング
+  // ・トップは最初の画面（写真）を隠さないよう、少しスクロールしてから出す
+  // ・スマホは下へ読み進めている間は引っ込み、止まるか上に戻ると出てくる
+  // ・エントリー欄やフッターが見えている間は、そちらのボタンに任せて隠す
+  const hero = document.querySelector('.x-hero');
+  const mobile = window.matchMedia('(max-width: 767px)');
+  const ends = [...document.querySelectorAll('#entry, .l-footer')];
+  let endVisible = false;
+  if (ends.length && 'IntersectionObserver' in window) {
+    const seen = new Set();
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => (e.isIntersecting ? seen.add(e.target) : seen.delete(e.target)));
+      endVisible = seen.size > 0;
+      sync();
+    }, { threshold: 0.15 });
+    ends.forEach((el) => io.observe(el));
+  }
+  let lastY = window.scrollY;
+  let tucked = false;
+  let idle;
+  function sync() {
+    const past = !hero || window.scrollY > window.innerHeight * 0.55;
+    a.classList.toggle('is-visible', past && !endVisible);
+    a.classList.toggle('is-tucked', tucked && mobile.matches);
+  }
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (Math.abs(y - lastY) > 6) { tucked = y > lastY; lastY = y; }
+    clearTimeout(idle);
+    idle = setTimeout(() => { tucked = false; sync(); }, 900);
+    sync();
+  }, { passive: true });
+  setTimeout(sync, 600);
 })();
 
 /* 「Let's Rise together.」を1文字ずつに分けて動かす */
