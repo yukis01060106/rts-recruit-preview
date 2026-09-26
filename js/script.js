@@ -4,7 +4,7 @@
    全ページの追従ボタンとAI向井のチャットに反映されます。
    空のあいだは、エントリーページへ案内します。
    ============================================================ */
-var RTS_LINE_URL = 'https://lin.ee/o2bAwTt' || 'entry-form.html';
+var RTS_LINE_URL = 'https://lin.ee/o2bAwTt' || 'entry-form';
 
 /* ============================================================
    Rise Tech Solutions - 採用サイト
@@ -456,7 +456,10 @@ var RTS_LINE_URL = 'https://lin.ee/o2bAwTt' || 'entry-form.html';
       const headerH = parseInt(
         getComputedStyle(document.documentElement).getPropertyValue('--header-h') || '100', 10
       );
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - headerH, behavior: 'smooth' });
+      const top = target.getBoundingClientRect().top + window.scrollY - headerH;
+      // なめらかスクロール（Lenis）が有効ならそちらで移動する
+      if (window.__lenis) window.__lenis.scrollTo(top, { duration: 1.2 });
+      else window.scrollTo({ top, behavior: 'smooth' });
     });
   });
 })();
@@ -723,7 +726,8 @@ initWireframe3D(document.getElementById('messageCanvas'), {
   const AVATAR = 'images/assistant/mukai.png';
   const NAME = 'AI 向井';
 
-  const page = (location.pathname.split('/').pop() || 'index.html');
+  // Next.js 版は /about のような URL。旧サイトの 'about.html' 形式に合わせて判定する
+  const page = ((location.pathname.replace(/\/$/, '').split('/').pop() || 'index').replace(/\.html$/, '') || 'index') + '.html';
 
   const GREETINGS = {
     'index.html': 'はじめまして！AI向井です。カジュアル面談は、本物の向井が担当します。その前に気になることがあれば、なんでも聞いてくださいね。',
@@ -737,7 +741,7 @@ initWireframe3D(document.getElementById('messageCanvas'), {
     'culture.html': '福利厚生やキャリアパス、オフィスの雰囲気まで。気になるタブから見てみてくださいね。',
     'workstyle.html': '残業時間も休日も、正直な数字で出しています。気になることがあれば聞いてくださいね。',
     'recruit.html': '気になる求人は見つかりましたか？給与や働き方のことも、遠慮なく聞いてください。',
-    'shinsotsu.html': '新卒向けページは準備中です。気になる方はお気軽にお問い合わせくださいね。',
+    'shinsotsu.html': '新卒・第二新卒の方、ようこそ！研修のことや1年目の働き方、なんでも聞いてくださいね。',
     'entry-form.html': '公式LINEから気軽に面談を予約してくださいね。「まず話を聞くだけ」でも大歓迎です。',
     'people-02.html': '先輩たちのリアルな声、参考になっていますか？他の先輩のことも紹介できますよ。',
     'people-03.html': '先輩たちのリアルな声、参考になっていますか？他の先輩のことも紹介できますよ。',
@@ -842,7 +846,7 @@ initWireframe3D(document.getElementById('messageCanvas'), {
     });
     const cta = document.createElement('a');
     cta.className = 'ai-concierge__chip ai-concierge__chip--cta';
-    cta.href = 'entry-form.html';
+    cta.href = 'entry-form';
     cta.textContent = 'エントリーする';
     wrap.appendChild(cta);
     body.appendChild(wrap);
@@ -876,7 +880,7 @@ initWireframe3D(document.getElementById('messageCanvas'), {
 
     const cta = document.createElement('a');
     cta.className = 'ai-concierge__chip ai-concierge__chip--cta';
-    cta.href = 'entry-form.html';
+    cta.href = 'entry-form';
     cta.textContent = 'エントリーする';
     wrap.appendChild(cta);
 
@@ -923,7 +927,7 @@ initWireframe3D(document.getElementById('messageCanvas'), {
     about: '会社のこと、もっと知りたいですか？',
     people: '先輩たち、みんな個性的なんですよ',
     gallery: 'オフィスの雰囲気、伝わりますか？',
-    workstyle: '数字で見る働き方、正直に出してます',
+    workstyle: '数字で見る働き方、まとめてます',
     environment: '福利厚生も、ちゃんと聞いてくださいね',
     stories: '社員のリアルな記事もあります',
     news: '最新のお知らせもチェックしてみて',

@@ -59,7 +59,7 @@
 /* 公式LINE（カジュアル面談の日程調整）への追従ボタン — 全ページ共通 */
 (function initLineFab() {
   if (document.querySelector('.x-line-fab')) return;
-  const url = window.RTS_LINE_URL || 'entry-form.html';
+  const url = window.RTS_LINE_URL || 'entry-form';
   const isLine = /line\.me|lin\.ee/.test(url);
   const a = document.createElement('a');
   a.className = 'x-line-fab' + (isLine ? '' : ' x-line-fab--fallback');
@@ -200,7 +200,7 @@
 (function initScrollExperience() {
   if (!document.getElementById('what')) return;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const LINE = window.RTS_LINE_URL || 'entry-form.html';
+  const LINE = window.RTS_LINE_URL || 'entry-form';
 
   const CHAPTERS = [
     { id: 'song',      label: 'イメージソング',    talk: 'RTSのイメージソング、3曲あるんです🎵 BGMにしながら見てみてください！' },
@@ -208,7 +208,7 @@
     { id: 'message',   label: 'メッセージ',        talk: 'ここは代表の想いが、ぎゅっと詰まってるところです🔥' },
     { id: 'mission',   label: '向き合っていること', talk: '「地方を、テクノロジーで守りたい」。これがRTSの原点なんです。' },
     { id: 'why',       label: 'RTSを選ぶ理由',      talk: '正直に、3つだけ。いちばん気になるのはどれですか？' },
-    { id: 'workstyle', label: '数字で見るRTS',      talk: '残業は月平均14.2時間。ここの数字は、ぜんぶ実績です📊' },
+    { id: 'workstyle', label: '数字で見るRTS',      talk: '残業・休日・有休のこと、数字でまとめています📊' },
     { id: 'day',       label: '社員の1日',          talk: 'タブを押すと、職種ごとの1日がのぞけますよ👆' },
     { id: 'people',    label: '働く仲間',           talk: '異業種から来た人ばかりなんです。インタビュー、ぜひ読んでみて！' },
     { id: 'gallery',   label: 'RTSの日常',          talk: 'ふだんの私たちです📷 写真は押すと大きくなります。' },
@@ -341,7 +341,7 @@
   mini.innerHTML = '<img src="" alt=""><p><small>NOW PLAYING</small><span></span></p><button aria-label="再生／一時停止"><svg viewBox="0 0 24 24" width="16" height="16"><polygon points="7,4 20,12 7,20" fill="currentColor"/></svg></button>';
   document.body.appendChild(mini);
   const miniBtn = mini.querySelector('button');
-  mini.querySelector('p').addEventListener('click', () => sec.scrollIntoView({ behavior: 'smooth' }));
+  mini.querySelector('p').addEventListener('click', () => window.__lenis ? window.__lenis.scrollTo(sec, { offset: -90 }) : sec.scrollIntoView({ behavior: 'smooth' }));
   mini.querySelector('p').style.cursor = 'pointer';
 
   function syncState() {
@@ -434,7 +434,7 @@
   if (!btns || btns.querySelector('.l-gnav__line')) return;
   const a = document.createElement('a');
   a.className = 'l-gnav__line';
-  a.href = window.RTS_LINE_URL || 'entry-form.html';
+  a.href = window.RTS_LINE_URL || 'entry-form';
   a.target = '_blank';
   a.rel = 'noopener';
   a.textContent = '公式LINEでカジュアル面談を予約';

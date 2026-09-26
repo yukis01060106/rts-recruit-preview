@@ -1,0 +1,5 @@
+:HL["/rts-recruit-preview/_next/static/chunks/e5f24649eb043f8a.css","style"]
+:HL["/rts-recruit-preview/_next/static/chunks/3a22affcb4d9ee17.css","style"]
+:HL["/rts-recruit-preview/_next/static/chunks/fbf65383b1e330e4.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Klee+One:wght@600&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap","style"]
+0:{"buildId":"k6qbae2nmYHueGpQam6aZ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"business-solution","paramType":null,"paramKey":"business-solution","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
