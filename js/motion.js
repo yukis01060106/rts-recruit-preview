@@ -6,6 +6,7 @@
    ・写真のパララックス（奥行き）
    ・カードの 3D チルト
    ・英字ラベルのタイプ演出
+   ・スクロール連動（ヒーロー退場・言葉が灯る・横に流れる写真・1日の進み）
    「動きを減らす」設定のときは何もしない
    ============================================================ */
 (function () {
@@ -246,4 +247,68 @@
     };
     requestAnimationFrame(loop);
   }
+  /* ---------- 10. スクロール連動（data-sp） ----------
+     pin  : 高さのあるセクションの中で画面が止まり、その間の進み具合 0→1
+     exit : 画面の上へ抜けていく進み具合 0→1（ヒーローが遠ざかる）
+     --p を CSS に渡し、見た目は CSS 側で決める */
+  const clamp01 = (v) => Math.max(0, Math.min(1, v));
+
+  // ギャラリー：縦スクロールで横に流れる（重複写真は隠す）
+  const gallery = document.querySelector('.x-gallery');
+  const gTrack = gallery && gallery.querySelector('.x-snap__track');
+  const layoutGallery = () => {
+    if (!gTrack) return;
+    const dist = Math.max(0, gTrack.scrollWidth - window.innerWidth + 48);
+    gallery.style.setProperty('--dist', dist);
+    gallery.style.height = `${window.innerHeight + dist}px`;
+  };
+  if (gTrack) {
+    gTrack.querySelectorAll('[aria-hidden="true"]').forEach((n) => { n.hidden = true; });
+    gallery.classList.add('is-pinned');
+    layoutGallery();
+    gTrack.querySelectorAll('img').forEach((img) => img.addEventListener('load', layoutGallery, { once: true }));
+  }
+
+  // ステートメント：言葉がひとつずつ灯る
+  const state = document.querySelector('.x-state');
+  const words = state ? [...state.querySelectorAll('.x-state__w')] : [];
+  if (state) state.classList.add('is-live');
+
+  // 社員の1日：タイムラインの線が伸び、通過した時刻が点灯
+  const dayLines = [...document.querySelectorAll('.x-day__line')];
+  dayLines.forEach((l) => l.classList.add('is-live'));
+
+  const spEls = [...document.querySelectorAll('[data-sp]')];
+  let spTicking = false;
+  const spUpdate = () => {
+    spTicking = false;
+    const vh = window.innerHeight;
+    spEls.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -vh || r.top > vh * 2) return;
+      const mode = el.dataset.sp;
+      let p;
+      if (mode === 'pin') p = clamp01(-r.top / Math.max(1, r.height - vh));
+      else p = clamp01(-r.top / Math.max(1, r.height));
+      el.style.setProperty('--p', p.toFixed(4));
+      if (el === state) {
+        const n = Math.floor(p * (words.length + 1.5));
+        words.forEach((w, i) => w.classList.toggle('is-lit', i < n));
+      }
+    });
+    dayLines.forEach((l) => {
+      if (!l.offsetParent) return;
+      const r = l.getBoundingClientRect();
+      const line = vh * 0.6;
+      l.style.setProperty('--fill', clamp01((line - r.top) / Math.max(1, r.height)).toFixed(4));
+      l.querySelectorAll('.x-day__item').forEach((it) => {
+        it.classList.toggle('is-passed', it.getBoundingClientRect().top + 16 < line);
+      });
+    });
+  };
+  const spRequest = () => { if (!spTicking) { spTicking = true; requestAnimationFrame(spUpdate); } };
+  window.addEventListener('scroll', spRequest, { passive: true });
+  window.addEventListener('resize', () => { layoutGallery(); spRequest(); });
+  document.addEventListener('click', (e) => { if (e.target.closest('.x-day__tab')) setTimeout(spRequest, 60); });
+  spUpdate();
 })();
