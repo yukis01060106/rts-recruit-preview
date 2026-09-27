@@ -6,4 +6,4 @@
 :HL["/rts-recruit-preview/images/team/team.jpg","image"]
 :HL["/rts-recruit-preview/images/team/member-13.jpg","image"]
 :HL["/rts-recruit-preview/images/music/lets-rise-together.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"rjzlvlbWUz2shhDy-EKPE"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"GY8N33wlO6SPGHe8P-p-q"}
