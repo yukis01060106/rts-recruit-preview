@@ -183,7 +183,12 @@
   section.style.setProperty('--chat-h', chat.offsetHeight + 'px');
 
   const N = msgs.length;
-  const at = k => 0.04 + (k / N) * 0.9;   // k通目が届くスクロール位置（0〜1）
+  // 1通ごとにしっかりスクロールの余白をとり、最後まで届いたあとも少し画面を止めて読めるようにする
+  const PER = 230;                                   // 1通あたりのスクロール量（px）
+  const HOLD = Math.round(window.innerHeight * 0.5); // 全部届いたあとに止まっている長さ
+  section.style.setProperty('--chat-scroll', (N * PER + HOLD) + 'px');
+  const END = (N * PER) / (N * PER + HOLD);          // 最後の1通が届く位置
+  const at = k => 0.03 + (k / N) * (END - 0.03);    // k通目が届くスクロール位置（0〜1）
   const TYPE = 0.07;                      // 届く直前に「入力中…」を出す幅
 
   let last = -1;

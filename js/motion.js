@@ -260,7 +260,9 @@
     if (!gTrack) return;
     const dist = Math.max(0, gTrack.scrollWidth - window.innerWidth + 48);
     gallery.style.setProperty('--dist', dist);
-    gallery.style.height = `${window.innerHeight + dist}px`;
+    gallery.dataset.dist = dist;
+    // 最後の写真まで流れたあと、少しだけ画面を止めてから次へ
+    gallery.style.height = `${window.innerHeight + dist + Math.round(window.innerHeight * 0.35)}px`;
   };
   if (gTrack) {
     gTrack.querySelectorAll('[aria-hidden="true"]').forEach((n) => { n.hidden = true; });
@@ -288,11 +290,13 @@
       if (r.bottom < -vh || r.top > vh * 2) return;
       const mode = el.dataset.sp;
       let p;
-      if (mode === 'pin') p = clamp01(-r.top / Math.max(1, r.height - vh));
+      if (el === gallery) p = clamp01(-r.top / Math.max(1, +gallery.dataset.dist || 1));
+      else if (mode === 'pin') p = clamp01(-r.top / Math.max(1, r.height - vh));
       else p = clamp01(-r.top / Math.max(1, r.height));
       el.style.setProperty('--p', p.toFixed(4));
       if (el === state) {
-        const n = Math.floor(p * (words.length + 1.5));
+        // 全部の言葉が灯るのは 7 割の地点。残りは読み終えるための「間」
+        const n = Math.floor(Math.min(1, p / 0.7) * (words.length + 0.5));
         words.forEach((w, i) => w.classList.toggle('is-lit', i < n));
       }
     });
