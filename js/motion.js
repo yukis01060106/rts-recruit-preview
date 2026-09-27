@@ -280,6 +280,16 @@
   const dayLines = [...document.querySelectorAll('.x-day__line')];
   dayLines.forEach((l) => l.classList.add('is-live'));
 
+  // ファーストビュー：スクロールで物語が進む（画面に留まり、step0〜4 を切り替える）
+  const heroStory = document.querySelector('.x-hero');
+  const heroStage = heroStory && heroStory.querySelector('.x-hero__stage');
+  const STEPS = [0.12, 0.32, 0.52, 0.70];   // この位置を越えるごとに次の場面へ（残りは読み終える「間」）
+  if (heroStage && heroStory.querySelector('.x-hero__talk')) {
+    heroStory.classList.add('is-story');
+    heroStory.dataset.sp = 'pin';
+    heroStory.dataset.step = '0';
+  }
+
   const spEls = [...document.querySelectorAll('[data-sp]')];
   let spTicking = false;
   const spUpdate = () => {
@@ -294,6 +304,10 @@
       else if (mode === 'pin') p = clamp01(-r.top / Math.max(1, r.height - vh));
       else p = clamp01(-r.top / Math.max(1, r.height));
       el.style.setProperty('--p', p.toFixed(4));
+      if (el === heroStory && heroStory.classList.contains('is-story')) {
+        const step = String(STEPS.filter((t) => p >= t).length);
+        if (heroStory.dataset.step !== step) heroStory.dataset.step = step;
+      }
       if (el === state) {
         // 全部の言葉が灯るのは 7 割の地点。残りは読み終えるための「間」
         const n = Math.floor(Math.min(1, p / 0.7) * (words.length + 0.5));

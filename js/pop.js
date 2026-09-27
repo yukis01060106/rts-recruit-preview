@@ -100,7 +100,10 @@
   let tucked = false;
   let idle;
   function sync() {
-    const past = !hero || window.scrollY > window.innerHeight * 0.55;
+    // トップは物語（ファーストビュー）を見終わってから出す
+    const past = !hero || (hero.classList.contains('is-story')
+      ? hero.getBoundingClientRect().bottom < window.innerHeight * 1.05
+      : window.scrollY > window.innerHeight * 0.55);
     a.classList.toggle('is-visible', past && !endVisible);
     a.classList.toggle('is-tucked', tucked && mobile.matches);
     sns.classList.toggle('is-visible', past && !endVisible);
@@ -178,7 +181,9 @@
 
   // 全メッセージを出した状態の高さで、枠の大きさを固定（届くたびに枠が伸び縮みしないように）
   const bodyH = body.scrollHeight;
-  section.style.setProperty('--chat-body-h', Math.min(bodyH, window.innerHeight - 220) + 'px');
+  // スマホ枠（上のバー・入力欄など）を除いた、画面に収まるトーク部分の高さ
+  const chrome = chat.offsetHeight - body.offsetHeight;
+  section.style.setProperty('--chat-body-h', Math.min(bodyH, window.innerHeight - 110 - 24 - chrome) + 'px');
   section.classList.add('is-scrolly');
   section.style.setProperty('--chat-h', chat.offsetHeight + 'px');
 
