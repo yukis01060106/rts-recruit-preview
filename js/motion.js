@@ -280,6 +280,54 @@
   const dayLines = [...document.querySelectorAll('.x-day__line')];
   dayLines.forEach((l) => l.classList.add('is-live'));
 
+  // 社員の1日：時計（針が回る）・いまの予定・時間帯で変わる背景
+  const daySec = document.getElementById('day');
+  const dayMobile = window.matchMedia('(max-width: 1024px)');
+  const toMin = (t) => { const m = /(\d{1,2}):(\d{2})/.exec(t || ''); return m ? (+m[1]) * 60 + (+m[2]) : null; };
+  const dayNow = new Map();
+  dayLines.forEach((l, li) => {
+    const panel = l.closest('.x-day__panel');
+    const items = [...l.querySelectorAll('.x-day__item')];
+    items.forEach((it, i) => it.style.setProperty('--i', i));
+    const now = document.createElement('div');
+    now.className = 'x-day__now';
+    now.setAttribute('aria-hidden', 'true');
+    now.innerHTML = '<span class="x-day__clock"><i class="is-h"></i><i class="is-m"></i><b></b></span>'
+      + '<span class="x-day__now-txt"><span class="x-day__now-time"></span><span class="x-day__now-what"></span></span>';
+    dayNow.set(l, { panel, items, now, last: undefined });
+  });
+  const placeNow = () => dayNow.forEach(({ panel, now }, l) => {
+    const visual = panel.querySelector('.x-day__visual');
+    if (dayMobile.matches) { if (now.parentNode !== panel || now.nextElementSibling !== l) panel.insertBefore(now, l); }
+    else if (visual && now.parentNode !== visual) visual.appendChild(now);
+  });
+  placeNow();
+  dayMobile.addEventListener('change', placeNow);
+  const setNow = (st, it) => {
+    if (st.last === it) return;
+    st.last = it;
+    st.items.forEach((x) => x.classList.toggle('is-current', x === it));
+    const t = it ? it.querySelector('.x-day__time').textContent.trim() : st.items[0].querySelector('.x-day__time').textContent.trim();
+    const mins = toMin(t) ?? 420;
+    const clock = st.now.querySelector('.x-day__clock');
+    clock.style.setProperty('--h', `${mins * 0.5}deg`);
+    clock.style.setProperty('--m', `${mins * 6}deg`);
+    const tt = st.now.querySelector('.x-day__now-time');
+    tt.textContent = t.replace(/^0/, '');
+    st.now.querySelector('.x-day__now-what').textContent = it ? it.querySelector('.x-day__ttl').textContent.trim() : 'まもなく1日がはじまります';
+    st.now.classList.remove('is-tick'); void st.now.offsetWidth; st.now.classList.add('is-tick');
+    const tod = mins < 11 * 60 ? 'morning' : mins < 16 * 60 ? 'noon' : mins < 18 * 60 + 30 ? 'evening' : 'night';
+    if (daySec) daySec.dataset.tod = it ? tod : 'dawn';
+    st.now.dataset.tod = it ? tod : 'dawn';
+  };
+  // タブを切り替えたら、予定が順番に流れ込むように
+  document.querySelectorAll('.x-day__tab').forEach((tab) => tab.addEventListener('click', () => {
+    const panel = document.getElementById(tab.getAttribute('aria-controls'));
+    if (!panel) return;
+    panel.classList.remove('is-enter'); void panel.offsetWidth; panel.classList.add('is-enter');
+    dayNow.forEach((st) => { st.last = undefined; });
+  }));
+
   // ファーストビュー：スクロールで物語が進む（画面に留まり、step0〜4 を切り替える）
   const heroStory = document.querySelector('.x-hero');
   const heroStage = heroStory && heroStory.querySelector('.x-hero__stage');
@@ -319,9 +367,18 @@
       const r = l.getBoundingClientRect();
       const line = vh * 0.6;
       l.style.setProperty('--fill', clamp01((line - r.top) / Math.max(1, r.height)).toFixed(4));
+      let cur = null;
       l.querySelectorAll('.x-day__item').forEach((it) => {
-        it.classList.toggle('is-passed', it.getBoundingClientRect().top + 16 < line);
+        const passed = it.getBoundingClientRect().top + 16 < line;
+        it.classList.toggle('is-passed', passed);
+        if (passed) cur = it;
       });
+      const st = dayNow.get(l);
+      if (st) {
+        setNow(st, cur);
+        const img = st.panel.querySelector('.x-day__visual img');
+        if (img) img.style.scale = (1 + Math.min(1, +l.style.getPropertyValue('--fill') || 0) * 0.08).toFixed(4);
+      }
     });
   };
   const spRequest = () => { if (!spTicking) { spTicking = true; requestAnimationFrame(spUpdate); } };
