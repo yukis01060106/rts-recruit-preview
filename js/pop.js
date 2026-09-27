@@ -309,8 +309,17 @@
   const hideTalk = () => { clearTalk(); talk.classList.remove('is-visible', 'is-typing', 'has-cta'); };
   talk.querySelector('.x-talk__close').addEventListener('click', () => { muted = true; hideTalk(); });
 
+  // ファーストビューを見終わったら、AI向井が登場して「ここからは案内します」とあいさつ
+  const INTRO = { talk: 'はじめまして、AI向井です😊 ここからは、わたしがRTSを案内しますね！' };
+  let introUntil = 0;
+  let arrived = false;
+  const queued = [];
+
   function say(ch) {
     if (muted || !ch.talk) return;
+    // あいさつ中に次の章に入ったら、あいさつが終わってから話す
+    const wait = introUntil - Date.now();
+    if (ch !== INTRO && wait > 0) { queued.push(setTimeout(() => say(ch), wait + 300)); return; }
     if (document.querySelector('.ai-concierge.is-open')) return;
     clearTalk();
     talkText.textContent = '';
@@ -320,7 +329,7 @@
       talk.classList.remove('is-typing');
       talkText.textContent = ch.talk;
     }, reduce ? 0 : 900));
-    talkTimers.push(setTimeout(hideTalk, ch.cta ? 12000 : 6500));
+    talkTimers.push(setTimeout(hideTalk, ch.cta ? 12000 : ch === INTRO ? 5200 : 6500));
   }
 
   /* ---------- いまの章を判定 ---------- */
@@ -335,6 +344,13 @@
     });
     const heroGone = document.getElementById('mv').getBoundingClientRect().bottom < mid;
     rail.classList.toggle('is-visible', heroGone && idx >= 0);
+    document.body.classList.toggle('is-in-hero', !heroGone);
+    if (heroGone && !arrived) {
+      arrived = true;
+      document.body.classList.add('is-mukai-arrive');
+      introUntil = Date.now() + (reduce ? 4200 : 5400);
+      say(INTRO);
+    }
     if (idx === current || idx < 0) return;
     current = idx;
     railNum.textContent = String(idx + 1).padStart(2, '0');
