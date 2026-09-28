@@ -293,7 +293,7 @@
   talk.setAttribute('role', 'status');
   talk.setAttribute('aria-live', 'polite');
   talk.innerHTML = `
-    <img class="x-talk__avatar" src="images/assistant/mukai.png" alt="">
+    <img class="x-talk__avatar" src="${(document.documentElement.dataset.base || '')}/images/assistant/mukai.png" alt="">
     <div class="x-talk__bubble">
       <p class="x-talk__name">AI 向井</p>
       <p class="x-talk__text"></p>

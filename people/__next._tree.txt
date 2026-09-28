@@ -6,4 +6,4 @@
 :HL["/rts-recruit-preview/images/個人写真/加藤.jpg","image"]
 :HL["/rts-recruit-preview/images/個人写真/青木.jpg","image"]
 :HL["/rts-recruit-preview/images/個人写真/中島.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"people","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"RdXPyFnMBISHlQbZY2Jvn"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"people","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"F7L7jCZvytWwV2wAiXxOj"}

@@ -1,0 +1,34 @@
+# ============================================================
+#  採用サイト（rt-solutions.co.jp/recruit/）用の設定
+#  ・旧コーポレートサイトの採用ページ → 新しいページへ転送（301）
+#  ・セキュリティ関連のヘッダー
+# ============================================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /recruit/
+
+  # 旧：職種ページ（コーポレートサイト時代の URL）
+  RewriteRule ^(engineer-junior|junior)/?$ /recruit/jobs/#beginner [R=301,NE,L]
+  RewriteRule ^(engineer-senior|senior)/?$ /recruit/jobs/#experienced [R=301,NE,L]
+  RewriteRule ^sales/?$ /recruit/jobs/#sales [R=301,NE,L]
+  RewriteRule ^marketing/?$ /recruit/jobs/#marketing [R=301,NE,L]
+</IfModule>
+
+ErrorDocument 404 /recruit/404.html
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 画像・音声・スクリプトはキャッシュして表示を速く
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType audio/mpeg "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>

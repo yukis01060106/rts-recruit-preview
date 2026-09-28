@@ -723,11 +723,14 @@ initWireframe3D(document.getElementById('messageCanvas'), {
    ページに応じた案内＋よくある質問への定型応答（スクリプト式・要API連携なし）
    ============================================================ */
 (function initAiConcierge() {
-  const AVATAR = 'images/assistant/mukai.png';
+  const AVATAR = (document.documentElement.dataset.base || '') + '/images/assistant/mukai.png';
   const NAME = 'AI 向井';
 
   // Next.js 版は /about のような URL。旧サイトの 'about.html' 形式に合わせて判定する
-  const page = ((location.pathname.replace(/\/$/, '').split('/').pop() || 'index').replace(/\.html$/, '') || 'index') + '.html';
+  // 公開先のサブパス（/recruit など）を取り除いてから判定する
+  const base = document.documentElement.dataset.base || '';
+  const rel = location.pathname.startsWith(base) ? location.pathname.slice(base.length) : location.pathname;
+  const page = ((rel.replace(/\/$/, '').split('/').pop() || 'index').replace(/\.html$/, '') || 'index') + '.html';
 
   const GREETINGS = {
     'index.html': 'はじめまして！AI向井です。カジュアル面談は、本物の向井が担当します。その前に気になることがあれば、なんでも聞いてくださいね。',
@@ -740,7 +743,7 @@ initWireframe3D(document.getElementById('messageCanvas'), {
     'people.html': '仲間たちのこと、もっと知りたいですか？未経験・異業種出身のメンバーも多いんですよ。',
     'culture.html': '福利厚生やキャリアパス、オフィスの雰囲気まで。気になるタブから見てみてくださいね。',
     'workstyle.html': '休日や働き方のことを、数字でまとめています。気になることがあれば聞いてくださいね。',
-    'recruit.html': '気になる求人は見つかりましたか？給与や働き方のことも、遠慮なく聞いてください。',
+    'jobs.html': '気になる求人は見つかりましたか？給与や働き方のことも、遠慮なく聞いてください。',
     'shinsotsu.html': '新卒・第二新卒の方、ようこそ！研修のことや1年目の働き方、なんでも聞いてくださいね。',
     'entry-form.html': '公式LINEから気軽に面談を予約してくださいね。「まず話を聞くだけ」でも大歓迎です。',
     'people-02.html': '先輩たちのリアルな声、参考になっていますか？他の先輩のことも紹介できますよ。',
