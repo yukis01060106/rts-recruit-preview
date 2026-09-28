@@ -254,7 +254,8 @@
   const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
   // ギャラリー：縦スクロールで横に流れる（重複写真は隠す）
-  const gallery = document.querySelector('.x-gallery');
+  // 写真は自動で流れるマーキーにしたので、スクロール連動はしない
+  const gallery = null;
   const gTrack = gallery && gallery.querySelector('.x-snap__track');
   const layoutGallery = () => {
     if (!gTrack) return;
