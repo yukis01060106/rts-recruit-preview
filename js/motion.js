@@ -122,7 +122,8 @@
 
   /* ---------- 4. 写真のパララックス ---------- */
   const PARA = '.x-city__hero .x-photo, .x-mukai__photo .x-photo, .x-ceo__photo .x-photo, .x-interview__photo .x-photo, .sol-block__photo .x-photo, .x-day__visual .x-photo, .x-message__photos .x-photo, .p-business__visual, .job-section__photo, .x-biz__img';
-  const paraEls = [...document.querySelectorAll(PARA)];
+  // スマホ・タブレット（指で操作する端末）では動かさない。iPhoneの Safari で、角丸の枠から写真がはみ出すため
+  const paraEls = finePointer ? [...document.querySelectorAll(PARA)] : [];
   paraEls.forEach((el) => el.classList.add('x-para'));
   const visible = new Set();
   const pio = new IntersectionObserver((ents) => ents.forEach((en) => en.isIntersecting ? visible.add(en.target) : visible.delete(en.target)), { rootMargin: '100px' });
@@ -378,7 +379,7 @@
       if (st) {
         setNow(st, cur);
         const img = st.panel.querySelector('.x-day__visual img');
-        if (img) img.style.scale = (1 + Math.min(1, +l.style.getPropertyValue('--fill') || 0) * 0.08).toFixed(4);
+        if (img && finePointer) img.style.scale = (1 + Math.min(1, +l.style.getPropertyValue('--fill') || 0) * 0.08).toFixed(4);
       }
     });
   };
